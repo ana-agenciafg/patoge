@@ -1,0 +1,11 @@
+{ 
+    "share-product":{
+        "component": "ShareProduct"
+    }, 
+    "voltar-ao-topo": {
+        "component": "VoltarAoTopo"
+    },
+    "custom-styles": {
+        "component": "CustomStyles"
+    } 
+}

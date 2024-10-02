@@ -1,0 +1,16 @@
+// Definir cores
+$cinza: #F5F5F5; 
+
+// Mixin para mobile
+@mixin mobile {
+    @media (max-width: 769px) {
+        @content;
+    } 
+}
+
+// Mixin para desktop
+@mixin desktop {
+    @media (min-width: 770px) {
+        @content;
+    } 
+}

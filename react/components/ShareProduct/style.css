@@ -1,0 +1,12 @@
+:global(.share-title){
+    font-family: "Figtree-Bold";
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+}
+:global(.share-buttons){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+}
