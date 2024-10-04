@@ -7,11 +7,21 @@
       "flex-layout.col#deals4"
     ],
     "props": {
-      "blockClass": "deals"
+      "blockClass": "deals",
+      "marginBottom": 9,
+      "marginTop": 9,
+      "paddingBottom": 8,
+      "paddingTop": 8,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "between" 
     }
   },
 
   "flex-layout.col#deals1": {
+    "props": {
+      "blockClass": "row-with-gap-10",
+      "verticalAlign": "middle"
+    }, 
     "children": [
       "image#deal1",
       "rich-text#deal1"
@@ -19,17 +29,21 @@
   },
   "image#deal1": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/box.png",
+      "src": "assets/img/cartao.svg",
       "maxHeight": "24px"
     }
   },
   "rich-text#deal1": {
     "props": {
-      "text": "Free shipping",
+      "text": "Parcelamento **em<br> até 10x**",
       "blockClass": "deals"
     }
   },
   "flex-layout.col#deals2": {
+    "props": {
+      "blockClass": "row-with-gap-10",
+      "verticalAlign": "middle"
+    }, 
     "children": [
       "image#deal2",
       "rich-text#deal2"
@@ -37,17 +51,21 @@
   },
   "image#deal2": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/delivery-fast.png",
+      "src": "assets/img/caminhao.svg",
       "maxHeight": "24px"
     }
   },
   "rich-text#deal2": {
     "props": {
-      "text": "One day delivery",
+      "text": "**Frete Grátis** nas<br> compras acima de R$899",
       "blockClass": "deals"
     }
   },
   "flex-layout.col#deals3": {
+    "props": {
+      "blockClass": "row-with-gap-10",
+      "verticalAlign": "middle"
+    }, 
     "children": [
       "image#deal3",
       "rich-text#deal3"
@@ -55,17 +73,21 @@
   },
   "image#deal3": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/store.png",
+      "src": "assets/img/presente.svg",
       "maxHeight": "24px"
     }
   },
   "rich-text#deal3": {
     "props": {
-      "text": "Pick up in store",
+      "text": "Embale para<br> **presente**",
       "blockClass": "deals"
     }
   },
   "flex-layout.col#deals4": {
+    "props": {
+      "blockClass": "row-with-gap-10",
+      "verticalAlign": "middle"
+    }, 
     "children": [
       "image#deal4",
       "rich-text#deal4"
@@ -73,13 +95,13 @@
   },
   "image#deal4": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/coupon.png",
+      "src": "assets/img/raio.svg",
       "maxHeight": "24px"
     }
   },
   "rich-text#deal4": {
     "props": {
-      "text": "Exclusive deals",
+      "text": "**Entrega Expressa** <br> para Belo Horizonte",
       "blockClass": "deals"
     }
   }

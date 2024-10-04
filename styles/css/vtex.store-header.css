@@ -48,10 +48,6 @@
   }
 }
 /* stick wrapper with the same color as the desktop/mobile header */
-:global(.vtex-sticky-layout-0-x-wrapper--sticky-header) {
-  background-color: #f0f0f0;
-}
-
 /* resize the logo for neat effect */
 :global(.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-store-components-3-x-logoLink) {
   transform: scale(0.85);

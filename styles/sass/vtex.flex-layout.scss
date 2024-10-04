@@ -20,11 +20,7 @@
 .flexRowContent--menu-link {
   background-color: #03044e;
   color: #fff;
-}
-
-.flexRowContent--main-header {
-  background-color: #f0f0f0;
-}
+} 
 
 .flexRowContent--main-header-mobile {
   align-items: center;
@@ -42,9 +38,12 @@
   font-size: 14px;
 }
 
-.flexRow--deals {
-  background-color: #0F3E99;
-  padding: 14px 0px;
+.flexRowContent--deals {
+  background-color: $cinza; 
+  @include desktop{
+    padding-left: 84px;
+    padding-right: 84px;
+  }
 }
 
 .flexRow--deals .stretchChildrenWidth {
@@ -102,17 +101,46 @@
   
   :global(.vtex-rich-text-0-x-paragraph){
     margin: 0;
-    font-family: 'FuturaBT-Book';
-    color: #1D1B1A;
-    font-size: 14px;
+    padding: 4px;
     &::before {
       content: '';
       display: inline-block;
       width: 23px;
       height: 16px;
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyIDZIMU0xMC40NSAxMEg1LjJNMSA0LjJMMTAgMTNMMSA0LjJMMFNMIUkwxJLlkMSJNMTIJI0SJJJ');
+      background-image: url('assets/img/cartao.svg');
       background-size: contain;
       background-repeat: no-repeat;
+      position: relative;
+      top: 2px;
+      margin-right: 10px;
     }
   }
 } 
+
+// CUSTOM 
+.flexCol--row-with-gap-30{
+  flex-direction: row;
+  gap: 30px;
+}
+.flexCol--row-with-gap-10{
+  flex-direction: row;
+  gap: 10px;
+}
+
+.flexCol--header-row3-right{
+  :global(.vtex-login-2-x-label){
+    font-size: 0; 
+    padding: 0;
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    background-image: url('assets/img/user.svg');
+    background-size: contain;
+    background-repeat: no-repeat;  
+  }
+  :global(.vtex-login-2-x-container){
+    :global(.vtex-button__label){
+      padding: 0 !important;
+    }
+  }
+}

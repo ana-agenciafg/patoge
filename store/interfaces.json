@@ -7,5 +7,8 @@
     },
     "custom-styles": {
         "component": "CustomStyles"
+    },
+    "AstinoMenu": {
+        "component": "AstinoMenu"
     } 
 }

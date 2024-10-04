@@ -67,11 +67,12 @@
         "danger--faded": "#ffe6e6",
         "warning": "#ffb100",
         "warning--faded": "#fff6e0",
-        "muted-1": "#727273",
+        "muted-1": "#585858",
         "muted-2": "#979899",
         "muted-3": "#cacbcc",
         "muted-4": "#e3e4e6",
-        "muted-5": "#f2f4f5"
+        "muted-5": "#f2f4f5",
+        "cinzaclaro": "#585858"
       },
       "hover-background": {
         "action-primary": "#072c75",
@@ -198,32 +199,32 @@
         "muted-5": "#f2f4f5"
       },
       "on": {
-        "base": "#3f3f40",
+        "base": "#1D1B1A",
         "base--inverted": "#ffffff",
         "action-primary": "#ffffff",
         "action-secondary": "#0F3E99",
         "emphasis": "#ffffff",
         "disabled": "#979899",
         "success": "#ffffff",
-        "success--faded": "#3f3f40",
+        "success--faded": "#1D1B1A",
         "danger": "#ffffff",
-        "danger--faded": "#3f3f40",
+        "danger--faded": "#1D1B1A",
         "warning": "#ffffff",
         "warning--faded": "#1a1a1a",
         "muted-1": "#ffffff",
         "muted-2": "#ffffff",
-        "muted-3": "#3f3f40",
-        "muted-4": "#3f3f40",
-        "muted-5": "#3f3f40"
+        "muted-3": "#1D1B1A",
+        "muted-4": "#1D1B1A",
+        "muted-5": "#1D1B1A"
       },
       "hover-on": {
         "action-primary": "#ffffff",
         "action-secondary": "#0F3E99",
         "emphasis": "#ffffff",
         "success": "#ffffff",
-        "success--faded": "#3f3f40",
+        "success--faded": "#1D1B1A",
         "danger": "#ffffff",
-        "danger--faded": "#3f3f40",
+        "danger--faded": "#1D1B1A",
         "warning": "#ffffff",
         "warning--faded": "#1a1a1a"
       },
@@ -232,9 +233,9 @@
         "action-secondary": "#0F3E99",
         "emphasis": "#ffffff",
         "success": "#ffffff",
-        "success--faded": "#3f3f40",
+        "success--faded": "#1D1B1A",
         "danger": "#ffffff",
-        "danger--faded": "#3f3f40",
+        "danger--faded": "#1D1B1A",
         "warning": "#ffffff",
         "warning--faded": "#1a1a1a"
       }
@@ -242,7 +243,7 @@
     "borderWidths": [0, 0.125, 0.25, 0.5, 1, 2],
     "borderRadius": [0, 0.125, 0.25, 0.5, 1],
     "widths": [1, 2, 4, 8, 16],
-    "maxWidths": [1, 2, 4, 8, 16, 32, 48, 64, 84],
+    "maxWidths": [1, 2, 4, 8, 16, 32, 48, 64, 96, 116, 134],
     "heights": [1, 2, 4, 8, 16],
     "sizes": [
       {"name": "small", "value": 2},
@@ -253,95 +254,48 @@
       "measure": [30, 34, 20],
       "styles": {
         "heading-1": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "700",
-          "fontSize": "3rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontWeight": "normal",
+          "fontSize": "2.4rem" 
         },
         "heading-2": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "700",
-          "fontSize": "2.25rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontWeight": "normal",
+          "fontSize": "2.2rem" 
         },
         "heading-3": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "700",
-          "fontSize": "1.75rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontWeight": "normal",
+          "fontSize": "2rem" 
         },
         "heading-4": {
-          "fontFamily": "FuturaBT-Medium",
           "fontWeight": "normal",
-          "fontSize": "1.5rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontSize": "1.8rem" 
         },
         "heading-5": {
-          "fontFamily": "FuturaBT-Medium",
           "fontWeight": "normal",
-          "fontSize": "1.25rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontSize": "1.6rem" 
         },
         "heading-6": {
-          "fontFamily": "FuturaBT-Medium",
           "fontWeight": "normal",
-          "fontSize": "1.25rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontSize": "1.4rem" 
         },
         "body": {
-          "fontFamily": "FuturaBT-Medium",
+          "fontFamily": "FuturaBT-Book",
           "fontWeight": "normal",
-          "fontSize": "1rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontSize": "1.4rem" 
         },
-        "small": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "normal",
-          "fontSize": "0.875rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+        "small": { 
+          "fontSize": "1.2rem" 
         },
-        "mini": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "normal",
-          "fontSize": "0.75rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+        "mini": { 
+          "fontSize": "1.0rem" 
         },
-        "action": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "500",
-          "fontSize": "1rem",
-          "textTransform": "uppercase",
-          "letterSpacing": "0"
+        "action": { 
         },
-        "action--small": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "500",
-          "fontSize": "0.875rem",
-          "textTransform": "uppercase",
-          "letterSpacing": "0"
+        "action--small": { 
         },
-        "action--large": {
-          "fontFamily": "FuturaBT-Medium",
-          "fontWeight": "500",
-          "fontSize": "1.25rem",
-          "textTransform": "uppercase",
-          "letterSpacing": "0"
+        "action--large": { 
         },
         "code": {
-          "fontFamily": "Consolas, monaco, monospace",
-          "fontWeight": "normal",
-          "fontSize": "1rem",
-          "textTransform": "initial",
-          "letterSpacing": "0"
+          "fontFamily": "Consolas, monaco, monospace" 
         }
       }
     },

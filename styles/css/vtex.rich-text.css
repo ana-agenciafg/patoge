@@ -1,10 +1,6 @@
-.container--deals {
-  color: #ffffff;
-  text-align: center;
-  justify-content: center;
-}
-
 .container--deals .paragraph {
+  text-transform: uppercase;
+  font-size: 1.6rem;
   margin: 0;
 }
 
@@ -75,6 +71,11 @@
     line-height: 1.3em;
   }
 }
+.strong {
+  font-family: "FuturaBT-Heavy";
+  font-weight: normal;
+}
+
 .container--layout-option {
   margin-left: 0.3em;
 }
