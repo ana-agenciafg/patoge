@@ -27,8 +27,7 @@
   "product-summary-image#shelf": {
     "props": {
       "showBadge": false,
-      "aspectRatio": "1:1",
-      "maxHeight": 300
+      "aspectRatio": "3:5" 
     }
   },
 

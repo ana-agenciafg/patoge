@@ -19,11 +19,18 @@
 .layoutContainer--shelf {
   margin-top: 20px;
   margin-bottom: 20px;
-  max-width: 96rem;
 }
 
 .slide--shelf {
   margin-bottom: 25px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.sliderArrows--shelf {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  padding: 7px;
+}
+.sliderArrows--shelf .caretIcon {
+  zoom: 0.5;
 }

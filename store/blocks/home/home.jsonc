@@ -5,7 +5,7 @@
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__",
-      "rich-text#shelf-title",
+      "flex-layout.row#shelf-title",
       "flex-layout.row#shelf",
       "info-card#home",
       "rich-text#question",
@@ -45,6 +45,9 @@
     }
   },
 
+  "flex-layout.row#shelf-title": {
+    "children": ["rich-text#shelf-title"]
+  },
   "rich-text#shelf-title": {
     "props": {
       "text": "## New in",
@@ -69,6 +72,7 @@
         "phone": 1
       },
       "infinite": true,
+      "showPaginationDots": false,
       "fullWidth": false,
       "blockClass": "shelf"
     }
