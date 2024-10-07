@@ -35,7 +35,7 @@
   },
   "rich-text#deal1": {
     "props": {
-      "text": "Parcelamento **em<br> até 10x**",
+      "text": "Parcelamento **<br> em até 10x**",
       "blockClass": "deals"
     }
   },

@@ -10,5 +10,8 @@
     },
     "AstinoMenu": {
         "component": "AstinoMenu"
+    },
+    "image-and-text": {
+        "component": "ImageAndText"
     } 
 }

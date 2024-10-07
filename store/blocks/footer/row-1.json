@@ -1,0 +1,25 @@
+{
+  "flex-layout.row#footer-1-desktop": {
+    "children": [ 
+      "voltar-ao-topo",
+      "flex-layout.col#footer-newsletter-col1",
+      "flex-layout.col#footer-newsletter-col2"
+    ],
+    "props": {
+      "blockClass": "footer-newsletter"
+    }
+  },
+  "flex-layout.col#footer-newsletter-col1": {
+    "children": ["rich-text#footer-newsletter-text"] 
+  },
+  "rich-text#footer-newsletter-text": {
+    "props": { 
+      "text": "**ASSINE NOSSA NEWSLETTER** <br>Não perca as novidades e promoções!",
+      "font": "t-heading-4",
+      "textColor": "on-base-inverted"
+    }
+  },
+  "flex-layout.col#footer-newsletter-col2": {
+    "children": ["newsletter"] 
+  }
+}

@@ -1,0 +1,45 @@
+{
+    "flex-layout.row#footer-3-desktop": {
+        "children": [
+        "flex-layout.col#footer-3-col1-desktop",
+        "flex-layout.col#footer-3-col2-desktop"
+        ],
+        "props": {
+        "horizontalAlign": "between",
+        "preventHorizontalStretch": true,
+        "blockClass": "footer-3-desktop"
+        }
+    },
+    "flex-layout.col#footer-3-col1-desktop": {
+        "children": [
+        "rich-text#footer-copyright"
+        ] 
+    },
+    "rich-text#footer-copyright": {
+        "props": {
+        "text": "Copyright © Todos os direitos reservados. PATOGÊ IND. E COM. S/A - Av. Industrial, 990, Loja 2, Ibirité-MG | CNPJ: 64.375.363/0005-18",
+        "blockClass": "footer-copyright",
+        "textColor": "c-muted-1"
+        }
+    },
+    "flex-layout.col#footer-3-col2-desktop": {
+        "children": [
+        "image#selo-agencia",
+        "image#selo-plataforma"
+        ],
+        "props": {
+        "blockClass": ["row-with-gap-30","align-center"],
+        "verticalAlign": "middle"
+        }
+    },
+    "image#selo-agencia": {
+        "props": {
+        "src": "assets/img/agencia-fg.svg" 
+        }
+    },
+    "image#selo-plataforma": {
+        "props": {
+        "src": "assets/img/vtex-io.svg" 
+        }
+    }
+}

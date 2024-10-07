@@ -1,6 +1,7 @@
 .container--deals .paragraph {
   text-transform: uppercase;
   font-size: 1.6rem;
+  line-height: 1.7rem;
   margin: 0;
 }
 
@@ -80,4 +81,7 @@
 .strong{
   font-family: "FuturaBT-Heavy"; 
   font-weight: normal;
+}
+.paragraph--footer-copyright{
+  font-size: 1.1rem;
 }

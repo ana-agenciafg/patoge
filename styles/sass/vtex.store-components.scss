@@ -11,18 +11,7 @@
   margin: 0 auto;
   background-color: #e6f1e6;
   padding: 0px;
-}
-
-.newsletter {
-  background-color: #03054e;
-  max-width: 1528px;
-  margin: 0 auto;
-}
-
-.newsletter .container {
-  padding: 60px 10px;
-}
-
+}  
 .label {
   color: #fff;
   font-size: 26px;
@@ -65,12 +54,9 @@
   margin: 1rem 0;
 }
 
-@media only screen and (min-width: 640px) {
-  .newsletter .container {
-    padding: 140px;
-  }
+@media only screen and (min-width: 640px) { 
   .label {
-     font-size: 40px;
+    font-size: 40px;
   }
   .infoCardContainer--info-card-home .infoCardTextContainer {
     width: 30%;

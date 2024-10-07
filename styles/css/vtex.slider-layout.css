@@ -27,10 +27,15 @@
   padding-right: 0.5rem;
 }
 
-.sliderArrows--shelf {
+.sliderLayoutContainer--shelf {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.sliderLayoutContainer .sliderArrows {
   background-color: rgba(255, 255, 255, 0.4) !important;
   padding: 7px;
 }
-.sliderArrows--shelf .caretIcon {
+.sliderLayoutContainer .sliderArrows .caretIcon {
   zoom: 0.5;
 }

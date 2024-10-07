@@ -26,10 +26,17 @@
   padding-left: .5rem;
   padding-right: .5rem; 
 }
-.sliderArrows--shelf{
-  background-color: rgba(255,255,255,.4) !important;
-  padding: 7px;
-  .caretIcon{
-    zoom: .5;
+
+.sliderLayoutContainer--shelf{
+  padding-left: 0 !important;
+  padding-right: 0 !important; 
+}
+.sliderLayoutContainer{
+  .sliderArrows{
+    background-color: rgba(255,255,255,.4) !important;
+    padding: 7px;
+    .caretIcon{
+      zoom: .5;
+    }
   }
 }

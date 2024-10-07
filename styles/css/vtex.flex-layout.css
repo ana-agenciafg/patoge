@@ -41,8 +41,8 @@
 }
 @media (min-width: 770px) {
   .flexRowContent--deals {
-    padding-left: 84px;
-    padding-right: 84px;
+    padding-left: 7%;
+    padding-right: 7%;
   }
 }
 
@@ -118,6 +118,7 @@
 
 .flexCol--row-with-gap-30 {
   flex-direction: row;
+  align-items: center;
   gap: 30px;
 }
 
@@ -138,6 +139,22 @@
 }
 .flexCol--header-row3-right :global(.vtex-login-2-x-container) :global(.vtex-button__label) {
   padding: 0 !important;
+}
+
+.flexRow--footer-newsletter {
+  background-color: #1D1B1A;
+  position: relative;
+}
+
+.flexRow--footer-3-desktop {
+  background-color: #F5F5F5;
+}
+
+.flexRow--trio-de-banners .text {
+  font-size: 3.2rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
 }
 
 .flexRowContent--contact {
