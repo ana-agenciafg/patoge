@@ -7,45 +7,260 @@
             "flex-layout.col#footer-2-col4"
         ],
         "props": {
-        "blockClass": "payment-methods"
+            "blockClass": "payment-methods",
+            "paddingTop": 8,
+            "paddingBottom": 8
         }
     }, 
     "flex-layout.col#footer-2-col1": {
-      "children": ["newsletter"] 
+        "children": [
+            "rich-text#footer-2-col1-title",
+            "vtex.menu@2.x:menu#footer_menu-1"
+        ],
+        "props": {
+            "preventVerticalStretch": true
+        }
     }, 
     "flex-layout.col#footer-2-col2": {
-      "children": ["newsletter"] 
+        "children": [
+            "rich-text#footer-2-col2-title",
+            "vtex.menu@2.x:menu#footer_menu-2"
+        ],
+        "props": {
+            "preventVerticalStretch": true
+        }
     }, 
     "flex-layout.col#footer-2-col3": {
-      "children": ["newsletter"] 
+        "children": [
+            "rich-text#footer-2-col3-title",
+            "vtex.menu@2.x:menu#footer_menu-3"
+        ],
+        "props": {
+            "preventVerticalStretch": true
+        }
     }, 
     "flex-layout.col#footer-2-col4": {
-      "children": ["social-networks"] 
+        "children": [
+            "rich-text#footer-2-col4-title",
+            "flex-layout.row#footer-redes-sociais"
+        ],
+        "props": {
+            "preventVerticalStretch": true
+        }
+    }, 
+    
+    "flex-layout.row#footer-redes-sociais": {
+        "children": [ 
+            "image#footer-redes-sociais-1",
+            "image#footer-redes-sociais-2",
+            "image#footer-redes-sociais-3",
+            "image#footer-redes-sociais-4",
+            "image#footer-redes-sociais-5"
+        ],
+        "props": {
+            "preventHorizontalStretch": true,
+            "colGap": 7
+        } 
+    },
+    // CONTEÚDOS
+    "rich-text#footer-2-col1-title": {
+        "props": {
+            "text": "INSTITUCIONAL",
+            "blockClass": "footer-title"
+        }
+    },
+    
+    "rich-text#footer-2-col2-title": {
+        "props": {
+            "text": "SUPORTE",
+            "blockClass": "footer-title"
+        }
+    }, 
+    
+    "rich-text#footer-2-col3-title": {
+        "props": {
+            "text": "CONTATO",
+            "blockClass": "footer-title"
+        }
     },
 
-    // CONTEÚDOS 
-    "social-networks": {
+    "rich-text#footer-2-col4-title": {
         "props": {
-            "socialNetworks": [
-                {
-                    "name": "Facebook",
-                    "url": "https://www.facebook.com/vtexonline/"
+            "text": "Siga a @patogeoficial",
+            "blockClass": "footer-title"
+        }
+    },
+
+    "vtex.menu@2.x:menu#footer_menu-1": {
+        "props": {
+            "orientation": "vertical",
+            "blockClass": "footer_menu",
+            "items": [
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "internal",
+                        "href": "/institucional/a-marca-patoge",
+                        "noFollow": false,
+                        "tagTitle": "A Marca",
+                        "text": "A Marca"
+                    }
                 },
-                {
-                    "name": "Instagram",
-                    "url": "https://www.instagram.com/vtextruecloud/"
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "internal",
+                        "href": "/onde-encontrar",
+                        "noFollow": false,
+                        "tagTitle": "Onde Encontrar",
+                        "text": "Onde Encontrar"
+                    }
                 },
-                {
-                    "name": "Twitter",
-                    "url": "https://twitter.com/vtexonline"
-                },
-                {
-                    "name": "Youtube",
-                    "url": "https://www.youtube.com/user/VTEXTV"
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "external",
+                        "href": "https://patoge.com.br/blog/",
+                        "noFollow": false,
+                        "tagTitle": "Blog",
+                        "text": "Blog"
+                    }
                 }
             ]
         }
+    },
+
+    "vtex.menu@2.x:menu#footer_menu-2": {
+        "props": {
+            "orientation": "vertical",
+            "blockClass": "footer_menu",
+            "items": [
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "internal",
+                        "href": "/account#/orders",
+                        "noFollow": false,
+                        "tagTitle": "Meus Pedidos",
+                        "text": "Meus Pedidos"
+                    }
+                },
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "external",
+                        "href": "/institucional/duvidas",
+                        "noFollow": false,
+                        "tagTitle": "Dúvidas Frequentes",
+                        "text": "Dúvidas Frequentes"
+                    }
+                },
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "internal",
+                        "href": "/institucional/regulamentos",
+                        "noFollow": false,
+                        "tagTitle": "Regulamentos e Promoções",
+                        "text": "Regulamentos e Promoções"
+                    }
+                },
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "internal",
+                        "href": "/institucional/termos-de-uso",
+                        "noFollow": false,
+                        "tagTitle": "Termos de Uso",
+                        "text": "Termos de Uso"
+                    }
+                },
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "internal",
+                        "href": "/institucional/devolucoes",
+                        "noFollow": false,
+                        "tagTitle": "Devoluções",
+                        "text": "Devoluções"
+                    }
+                }
+            ]
+        }
+    },
+
+    "vtex.menu@2.x:menu#footer_menu-3": {
+        "props": {
+            "orientation": "vertical",
+            "blockClass": "footer_menu",
+            "items": [
+                { 
+                    "type": "custom",
+                    "highlight": false,
+                    "itemProps": {
+                        "type": "internal",
+                        "href": "/institucional/fale-conosco",
+                        "noFollow": false,
+                        "tagTitle": "Fale Conosco",
+                        "text": "Fale Conosco"
+                    } 
+                }
+            ]
+        }
+    },
+
+    
+    "image#footer-redes-sociais-1": { 
+        "props": {
+            "src": "assets/img/instagram.svg",
+            "link": {
+                "url": "https://www.instagram.com/patogeoficial/",
+                "openNewTab": true
+            }
+        }
+    },
+    "image#footer-redes-sociais-2": {
+        "props": {
+            "src": "assets/img/facebook.svg",
+            "link": {
+                "url": "https://web.facebook.com/Patogejeans",
+                "openNewTab": true
+            }
+        }
+    },
+    "image#footer-redes-sociais-3": {
+        "props": {
+            "src": "assets/img/tik-tok.svg",
+            "link": {
+                "url": "https://www.tiktok.com/@patoge_oficial",
+                "openNewTab": true
+            }
+        }
+    },
+    "image#footer-redes-sociais-4": {
+        "props": {
+            "src": "assets/img/pinterest.svg",
+            "link": {
+                "url": "https://br.pinterest.com/patogeoficial/",
+                "openNewTab": true
+            }
+        }
+    },
+    "image#footer-redes-sociais-5": {
+        "props": {
+            "src": "assets/img/youtube.svg",
+            "link": {
+                "url": "https://www.youtube.com/user/Patogeoficial",
+                "openNewTab": true
+            }
+        }
     }
-
-
 }

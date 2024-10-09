@@ -124,15 +124,38 @@
   background-color: $cinza;
 }
 
+.flexRowContent--trio-de-banners{
+  @include desktop{
+    gap: 8px;
+  }
+  @include mobile{
+    .stretchChildrenWidth{
+      margin-bottom: 20px;
+    }
+  }
+}
+
 .flexRow--trio-de-banners{
   :global(.vtex-image-and-text-0-x-text){
     font-size: 3.2rem;
     color: white; 
     position: absolute;
     bottom: 0;
-    margin: 30px;
-    font-family: 'FuturaBT-Book';
+    margin: 0;
+    padding: 30px;
+    font-family: 'FuturaBT-Light';
     font-weight: normal;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::after{
+      content: url('assets/img/seta-branca.svg');
+    }
+    @include mobile{
+      font-size: 2.6rem;
+      padding: 20px;
+    }
   }
   :global(.vtex-image-and-text-0-x-block){
     position: relative;
@@ -144,5 +167,48 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+}
+
+.flexRow--header-contato{
+  position: relative;
+  &:hover{
+    .flexCol--header-contato-content{
+      display: flex;
+    }
+  }
+}
+
+.flexCol--header-contato-content{
+  position: absolute;
+  display: none;
+  background-color: white;
+  width: 240px;
+  padding: 0 12px;
+  left: -4px;
+  top: 32px;
+  height: fit-content;
+  box-shadow: $box-shadow;
+  &::before{
+    content: "";
+    display: block;
+    height: 30px;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: -15px;
+  }
+}
+.flexColChild--header-contato-content {
+  border-bottom: 1px solid $cinza;
+}
+
+.flexRowContent--payment-methods { 
+  :global(.vtex-menu-2-x-styledLinkContainer--footer_menu) {
+    margin: 3px 0;
+  }
+  :global(.vtex-rich-text-0-x-paragraph--footer-title)  {
+    margin: 0 0 5px 0;
+    font-family: 'FuturaBT-Heavy';
   }
 }

@@ -44,17 +44,10 @@
             "horizontalAlign": "center"
         },
         "children": [
-            "image#header-row3-left-contato",
+            "flex-layout.row#header-row3-left-contato",
             "image#header-row3-left-busca"
         ]
     }, 
-    "image#header-row3-left-contato": {
-        "props": {
-            "src": "assets/img/contato.svg",
-            "width": "24px",
-            "height": "21px"
-        }
-    },
     "image#header-row3-left-busca": {
         "props": {
             "src": "assets/img/busca.svg",

@@ -8,9 +8,9 @@
 }
 
 @font-face {
-    font-family: 'FuturaBT-LightCondensedT';
-    src: url('assets/fonts/FuturaBT-LightCondensed.woff2') format('woff2'),
-        url('assets/fonts/FuturaBT-LightCondensed.woff') format('woff');
+    font-family: 'FuturaBT-Light';
+    src: url('assets/fonts/FuturaBT-Light.woff2') format('woff2'),
+        url('assets/fonts/FuturaBT-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;

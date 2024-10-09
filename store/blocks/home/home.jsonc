@@ -5,10 +5,10 @@
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__",
+      "flex-layout.row#home-duplo-banners",
       "flex-layout.row#trio-de-banners",
       "flex-layout.row#shelf-title",
-      "flex-layout.row#shelf",
-      "info-card#home",  
+      "flex-layout.row#shelf", 
       "flex-layout.row#deals"
     ]
   },
@@ -83,20 +83,6 @@
       "showPaginationDots": false,
       "fullWidth": false,
       "blockClass": "shelf"
-    }
-  },
-
-  "info-card#home": {
-    "props": {
-      "id": "info-card-home",
-      "isFullModeStyle": false,
-      "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
-      "callToActionUrl": "/sale/d",
-      "blockClass": "info-card-home",
-      "textAlignment": "center"
     }
   } 
 }

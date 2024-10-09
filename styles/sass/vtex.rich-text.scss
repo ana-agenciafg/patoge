@@ -85,3 +85,53 @@
 .paragraph--footer-copyright{
   font-size: 1.1rem;
 }
+.wrapper--header-contato-content{
+  width: 100%;
+}
+.paragraph--header-contato-content{
+  margin: 0;
+  position: relative;
+  padding: 12px 8px 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  .link{
+    text-decoration: unset;
+    color: initial;
+  }
+  &::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    border-right: #585858 1px solid;
+    border-top: #585858 1px solid;
+    transform: rotate(45deg);
+  }  
+  &::before{
+    position: absolute;
+    left: 5px;
+    top: 13px;
+  }
+}
+.paragraph--header-contato-content-whatsapp{ 
+  &::before{
+    content: url(assets/img/whatsapp2.svg);
+  }
+}
+.paragraph--header-contato-content-lojas{ 
+  &::before{
+    content: url(assets/img/local.svg);
+  }
+}
+.paragraph--header-contato-content-devolucoes{ 
+  &::before{
+    content: url(assets/img/devolucoes.svg);
+  }
+}
+.paragraph--header-contato-content-duvidas{ 
+  &::before{
+    content: url(assets/img/duvidas.svg);
+  }
+}

@@ -34,12 +34,20 @@
     },
     "image#selo-agencia": {
         "props": {
-        "src": "assets/img/agencia-fg.svg" 
+            "src": "assets/img/agencia-fg.svg",
+            "link": {
+                "url": "https://agenciafg.com.br/",
+                "openNewTab": true
+            }
         }
     },
     "image#selo-plataforma": {
         "props": {
-        "src": "assets/img/vtex-io.svg" 
+            "src": "assets/img/vtex-io.svg",
+            "link": {
+                "url": "https://vtex.com/",
+                "openNewTab": true
+            }
         }
     }
 }
