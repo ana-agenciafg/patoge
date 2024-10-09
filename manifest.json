@@ -1,7 +1,7 @@
 {
   "vendor": "patoge",
   "name": "patoge",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "builders": {
     "assets": "0.x",
     "styles": "2.x",
