@@ -8,7 +8,7 @@ type SubmenuLink = {
   hasSubmenu?: boolean;
   submenuLinks?: SubmenuLink[];
   linkColor?: string;
-  underline?: boolean;
+  bold?: boolean;
 };
 
 type Banner = {
@@ -25,7 +25,7 @@ type MenuLink = {
   submenuLinks?: SubmenuLink[];
   banners?: Banner[];
   linkColor?: string;
-  underline?: boolean;
+  bold?: boolean;
 };
 
 interface Props {
@@ -35,6 +35,7 @@ interface Props {
 const CSS_HANDLES = [
   "menuContainer",
   "submenuWrapper",
+  "submenuTitleCol",
   "wrapper",
   "menuItem",
   "menuLink",
@@ -47,8 +48,8 @@ const CSS_HANDLES = [
   "submenuToggleIcon",
   "activeMenuItem",
   "hoverMenuItem",
-  "openSubmenu",
-  "level-",
+  "container",
+  "openSubmenu", 
 ] as const;
 
 export const AstinoMenu = (props: Props) => {
@@ -76,8 +77,8 @@ export const AstinoMenu = (props: Props) => {
     if (!submenuLinks) return null;
 
     return (
-      <ul
-        className={`${handles.submenuWrapper} ${handles["level-"]}${level} ${
+      <ul 
+        className={`${handles.submenuWrapper} level-${level} ${
           openSubmenus.includes(parentIndexPath) ? handles.openSubmenu : ""
         }`}
       >
@@ -107,7 +108,7 @@ export const AstinoMenu = (props: Props) => {
             >
               {isMobile ? (
                 <p
-                  style={{ color: submenuLink.linkColor || "#000" }}
+                  style={{ color: submenuLink.linkColor || "#1D1B1A" }}
                   className={handles.menuLink}
                   onClick={(e) => {
                     if (submenuLink.hasSubmenu) {
@@ -132,8 +133,8 @@ export const AstinoMenu = (props: Props) => {
               ) : (
                 <a
                   href={submenuLink.url}
-                  style={{ color: submenuLink.linkColor || "#000" }}
-                  className={`${handles.menuLink} ${submenuLink.underline ? "underline" : ""}`}
+                  style={{ color: submenuLink.linkColor || "#1D1B1A" }}
+                  className={`${submenuLink.text == "Ver tudo" ? "underline" : ""} ${handles.menuLink} ${submenuLink.bold ? "bold" : ""} ${level === 1 ? handles.submenuTitleCol : ""}`}
                 >
                   {submenuLink.text}
                 </a>
@@ -162,7 +163,7 @@ export const AstinoMenu = (props: Props) => {
               key={indexPath}
               className={`${handles.menuItem} ${
                 openSubmenus.includes(indexPath) ? handles.activeMenuItem : ""
-              } ${!isMobile ? handles.hoverMenuItem : ""}`}
+              } ${!isMobile ? handles.hoverMenuItem : ""} level-1`}
               onMouseEnter={() => !isMobile && setOpenSubmenus([indexPath])}
               onMouseLeave={() => !isMobile && setOpenSubmenus([])}
               aria-haspopup={link.hasSubmenu ? "true" : undefined}
@@ -172,8 +173,8 @@ export const AstinoMenu = (props: Props) => {
             >
               {isMobile ? (
                 <p
-                  className={handles.menuLink}
-                  style={{ color: link.linkColor || "#000" }}
+                  className={`${handles.menuLink} level-1`}
+                  style={{ color: link.linkColor || "#1D1B1A" }}
                   onClick={(e) => {
                     if (link.hasSubmenu) {
                       e.preventDefault();
@@ -197,8 +198,8 @@ export const AstinoMenu = (props: Props) => {
               ) : (
                 <a
                   href={link.url}
-                  className={`${handles.menuLink} ${link.underline ? "underline" : ""}`}
-                  style={{ color: link.linkColor || "#000" }}
+                  className={`${handles.menuLink} ${link.bold ? "bold" : ""} level-1`}
+                  style={{ color: link.linkColor || "#1D1B1A" }}
                 >
                   {link.text}
                 </a>
@@ -236,7 +237,10 @@ export const AstinoMenu = (props: Props) => {
                             />
 
                             {banner.bannerText && (
-                              <span className={handles.bannerText}>{banner.bannerText}</span>
+                              <span className={handles.bannerText}>
+                                {banner.bannerText}
+                                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12.0313L7.0026 7.01567L2 2" stroke="#1D1B1A" stroke-width="1.5" stroke-linecap="square"/></svg>
+                              </span>
                             )}
                           </a>
                         );
@@ -278,10 +282,10 @@ AstinoMenu.schema = {
             title: "URL do Link",
             default: "#",
           },
-          underline: {
+          bold: {
             type: "boolean",
-            title: "Ativar underline nos links?",
-            default: true,
+            title: "Ativar negrito?",
+            default: false,
           },
           hasSubmenu: {
             type: "boolean",
@@ -365,7 +369,7 @@ AstinoMenu.schema = {
           linkColor: {
             type: "string",
             title: "Cor dos Links",
-            default: "#000000",
+            default: "#1D1B1A",
             widget: {
               "ui:widget": "color",
             },

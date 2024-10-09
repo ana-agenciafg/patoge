@@ -7,164 +7,26 @@
   },
   "header-layout.desktop": {
     "children": [
-      "flex-layout.row#topo-header",
-      "flex-layout.row#main-header-desktop",
-      "flex-layout.row#3-desktop"
+      "sticky-layout#header-desktop"
     ]
   },
-
-  // supertopo 
-  "flex-layout.row#topo-header": {
-    "children": ["rich-text#top-header"],
-    "props": {
-      "fullWidth": true,
-      "blockClass": "topo-header"
-    }
-  }, 
-  "rich-text#top-header": {
-    "props": {
-      "text": "Parcelamento **em até 10x**",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "textColor": "c-muted-1"
-    } 
+  "header-layout.mobile": {
+    "children": ["sticky-layout#header-mobile"]
   },
-  
 
-  "flex-layout.row#main-header-desktop": {
-    "props": { 
-      "paddingBottom": 4,
-      "paddingTop": 7,
-      "horizontalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": true
-    },
-    "children": ["flex-layout.col#logo-desktop"]
-  },
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
     }
-  },
-  "flex-layout.row#3-desktop": {  
-    "props": { 
-      "horizontalAlign": "between",
-      "preventHorizontalStretch": true
-    },
-    "children": [
-      "flex-layout.col#header-row3-left",
-      "flex-layout.col#header-row3-center",
-      "flex-layout.col#header-row3-right"
-      // "search-bar", 
-      // "login",
-      // "minicart.v2"
-    ]
-  },
-
-  // esquerda 
-  "flex-layout.col#header-row3-left": {
-    "props": {
-      "blockClass": "row-with-gap-30",
-      "verticalAlign": "middle",
-      "horizontalAlign": "center"
-    },
-    "children": [
-      "image#header-row3-left-contato",
-      "image#header-row3-left-busca"
-    ]
   }, 
-  "image#header-row3-left-contato": {
-    "props": {
-      "src": "assets/img/contato.svg",
-      "width": "24px",
-      "height": "21px"
-    }
-  },
-  "image#header-row3-left-busca": {
-    "props": {
-      "src": "assets/img/busca.svg",
-      "width": "21px",
-      "height": "21px"
-    }
-  },
 
-  // meio  
-  "flex-layout.col#header-row3-center": { 
-    "props": {
-      "verticalAlign": "middle",
-      "horizontalAlign": "center"
-    },
-    "children": ["AstinoMenu#news"]
-  },  
-  
-  // direita 
-  "flex-layout.col#header-row3-right": {
-    "props": {
-      "blockClass": ["row-with-gap-30", "header-row3-right"],
-      "verticalAlign": "middle",
-      "horizontalAlign": "center"
-    }, 
-    "children": [
-      "image#header-row3-left-favoritos",
-      "login",
-      "minicart.v2"
-    ]
-  }, 
-  "image#header-row3-left-favoritos": {
-    "props": {
-      "src": "assets/img/coracao.svg",
-      "width": "24px",
-      "height": "21px"
-    }
-  },  
-
-
-
-  
-  "flex-layout.col#logo-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["logo#desktop"]
-  }, 
-  "logo#desktop": {
+  "logo#header-logo": {
     "props": {
       "title": "Logo",
       "href": "/",
       "url": "assets/img/patoge.svg",
       "width": "125",
-      "height": "25"
-    }
-  },
-  "header-layout.mobile": {
-    "children": ["sticky-layout#1-mobile"]
-  },
-  "sticky-layout#1-mobile": {
-    "children": ["flex-layout.row#1-mobile"]
-  },
-  "flex-layout.row#1-mobile": {
-    "children": [ 
-      "logo#mobile",
-      "flex-layout.col#spacer",
-      "login",
-      "minicart.v2"
-    ],
-    "props": {
-      "blockClass": "main-header-mobile",
-      "preventHorizontalStretch": true,
-      "preserveLayoutOnMobile": true,
-      "fullWidth": true
-    }
-  },  
-
-  "logo#mobile": {
-    "props": {
-      "title": "Logo",
-      "href": "/",
-      "url": "assets/img/patoge.svg",
-      "width": "77.5",
-      "height": "27.5"
+      "height": "25" 
     }
   }
 }

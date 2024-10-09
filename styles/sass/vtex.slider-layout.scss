@@ -1,19 +1,13 @@
 .sliderLayoutContainer {
   justify-content: center;
 }
-
-.sliderLayoutContainer--carousel {
-  background-color: #F0F0F0;
-  min-height: 450px;
-}
-
+ 
 .sliderTrackContainer {
   max-width: 100%;
 }
 
-.paginationDotsContainer {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+.paginationDotsContainer { 
+  margin-bottom: 2rem;
 }
 
 .layoutContainer--shelf {
@@ -38,5 +32,54 @@
     .caretIcon{
       zoom: .5;
     }
+  }
+}
+
+.sliderLayoutContainer--carousel-fullbanner-home{
+  height: 100vh;
+  .sliderTrackContainer, .sliderTrack {
+    height: 100%;
+    width: 100%; 
+  }
+  .imageElement {
+    height: 100%;
+    max-height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+ 
+.paginationDot--carousel-fullbanner-home--isActive{
+  background-color: rgba(255, 255, 255) !important;
+} 
+.paginationDot--carousel-fullbanner-home{ 
+  background-color: rgba(255,255,255,0.4);
+  height: 3px !important;
+  border-radius: 0;
+  padding: 0;
+  margin: 0 5px;
+  @include desktop{
+    width: 57px !important;
+  }
+  @include mobile{
+    width: 48px !important;
+  }
+}
+
+
+@include desktop{
+  .sliderLeftArrow--carousel-fullbanner-home{
+    left: 3rem;
+  }
+  .sliderRightArrow--carousel-fullbanner-home{
+    right: 3rem;
+  }
+}
+@include mobile{
+  .sliderLeftArrow--carousel-fullbanner-home{
+    left: 1.5rem;
+  }
+  .sliderRightArrow--carousel-fullbanner-home{
+    right: 1.5rem;
   }
 }

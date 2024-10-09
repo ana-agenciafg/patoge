@@ -1,0 +1,9 @@
+.menuIcon--drawer__mobile{
+    display: none;
+}
+.openIconContainer--drawer__mobile{
+    padding: 0;
+    &::before{
+        content: url(assets/img/drawer-mobile.svg);
+    }
+} 

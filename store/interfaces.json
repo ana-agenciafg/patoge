@@ -4,10 +4,7 @@
     }, 
     "voltar-ao-topo": {
         "component": "VoltarAoTopo"
-    },
-    "custom-styles": {
-        "component": "CustomStyles"
-    },
+    }, 
     "AstinoMenu": {
         "component": "AstinoMenu"
     },

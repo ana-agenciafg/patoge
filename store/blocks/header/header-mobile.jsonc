@@ -1,0 +1,49 @@
+{  
+    "sticky-layout#header-mobile": {
+        "children": ["flex-layout.row#header-mobile"],
+        "props": { 
+        "blockClass": "header"
+        }
+    },
+    "flex-layout.row#header-mobile": {
+        "children": [ 
+            "flex-layout.col#header-col1-mobile",
+            "flex-layout.col#header-col2-mobile",
+            "flex-layout.col#header-col3-mobile"
+        ],
+        "props": {
+            "blockClass": "main-header-mobile", 
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true
+        }
+    },  
+
+    "drawer#header-mobile": {
+        "props":{
+            "blockClass":"drawer__mobile",
+            "maxWidth":"90%"
+        },
+        "children": ["AstinoMenu#news"]
+    },
+    "flex-layout.col#header-col1-mobile": {
+        "props": {
+            "blockClass": "row-with-gap-25" 
+        },
+        "children": [
+            "drawer#header-mobile",
+            "image#header-row3-left-busca"
+        ]
+    },
+    "flex-layout.col#header-col2-mobile": {
+        "props": {
+            "verticalAlign": "middle"
+        },
+        "children": ["logo#header-logo"]
+    },
+    "flex-layout.col#header-col3-mobile": {
+        "props": {
+            "verticalAlign": "middle"
+        },
+        "children": ["minicart.v2"]
+    }
+}

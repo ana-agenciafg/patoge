@@ -1,5 +1,4 @@
-import React from 'react'
-import { useCssHandles } from 'vtex.css-handles'
+import React from 'react' 
 
 interface ImageAndTextProps {
   image: string
@@ -13,8 +12,6 @@ interface ImageAndTextProps {
   loading?:  "eager" | "lazy" 
 }
 
-const CSS_HANDLES = ['block','gradient', 'image', 'text'] as const
-
 const ImageAndText = ({ 
   image,
   alt,
@@ -25,8 +22,7 @@ const ImageAndText = ({
   width,
   height,
   loading = "eager"
-}: ImageAndTextProps) => {
-    const { handles } = useCssHandles(CSS_HANDLES);
+}: ImageAndTextProps) => { 
 
   const Tag = tagText  // Garantindo que o tagText seja um elemento válido
 
@@ -38,16 +34,16 @@ const ImageAndText = ({
         height={height || "auto"}
         loading={loading || "eager"}
         alt={alt || text || ""}
-        className={handles.image} 
+        className="vtex-image-and-text-0-x-image" 
       />
-      <div className={handles.gradient}></div>
-      {text && <Tag className={handles.text}>{text}</Tag> }
+      <div className="vtex-image-and-text-0-x-gradient"></div>
+      {text && <Tag className="vtex-image-and-text-0-x-text">{text}</Tag> }
     </>
   )
 
   // Se houver link, envolver o conteúdo no <a>
   return (
-    <div className={handles.block}>
+    <div className="vtex-image-and-text-0-x-block">
       {link ? (
         <a 
           href={link} 

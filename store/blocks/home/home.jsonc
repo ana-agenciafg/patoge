@@ -1,7 +1,7 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#demo",
+      "list-context.image-list#fullbanner-home",
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__",
@@ -14,11 +14,12 @@
   },
 
 
-
-  "list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
-    "props": {
-      "height": 570,
+  // FULLBANNER 
+  "list-context.image-list#fullbanner-home": {
+    "title": "FullBanner Home",
+    "children": ["slider-layout#fullbanner-images"],
+    "props": { 
+      "blockClass": "fullbanner-home",
       "preload": true,
       "images": [
         {
@@ -32,7 +33,7 @@
       ]
     }
   },
-  "slider-layout#demo-images": {
+  "slider-layout#fullbanner-images": {
     "props": {
       "itemsPerPage": {
         "desktop": 1,
@@ -40,10 +41,17 @@
         "phone": 1
       },
       "infinite": true,
-      "showNavigationArrows": "desktopOnly",
-      "blockClass": "carousel"
+      "autoplay": {
+        "stopOnHover": true,
+        "timeout": 4000
+      },
+      "showPaginationDots": "always",
+      "showNavigationArrows": "always",
+      "blockClass": "carousel-fullbanner-home"
     }
   },
+  // FIM - FULLBANNER 
+  
 
   "flex-layout.row#shelf-title": {
     "children": ["rich-text#shelf-title"]

@@ -2,3 +2,25 @@ html{
     font-size: 62.5% !important;
     // 1rem equivale a 10px. Então, para 14px, 1.4rem.
 }
+
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--header):not(:global(.vtex-sticky-layout-0-x-wrapper--stuck)){
+    position: fixed !important;
+    z-index: 10;
+    width: 100%;
+    :global(.vtex-sticky-layout-0-x-container) { 
+        box-shadow: unset; 
+        transition: all 0.3s ease; 
+    }  
+    :global(.vtex-sticky-layout-0-x-container):not(:hover) {
+        background-image: linear-gradient(to bottom,rgba(29,27,26,0.8),rgba(29,27,26,0.4),transparent);
+        background-color: transparent;
+        :global(.vtex-flex-layout-0-x-flexRow){
+            filter: invert(1);
+        }
+    }  
+    @include desktop{ 
+        :global(.vtex-sticky-layout-0-x-container) {  
+            top: -31px !important; 
+        }  
+    }
+}  

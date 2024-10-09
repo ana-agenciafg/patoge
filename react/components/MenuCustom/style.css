@@ -9,52 +9,55 @@
   z-index: 1000;
 }
 
-.menuItem {
-  /* position: relative; */ 
-}
-
 .wrapper--main-menu-header{
   margin: 0;
 }
 
+:global(.bold){
+  font-family: 'FuturaBT-Heavy'
+}
+:global(.underline){
+  text-decoration: underline !important;
+}
+
 .menuLink {
-  text-decoration: none; 
-  padding: 10px 20px;
-  display: flex;
-  align-items: center; 
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.menuLink:hover {
-  color: #007bff; /* Cor do hover */
-}
-
-.submenuToggleIcon::after {
-  content: "";
-  display: block;
-  float: right;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
-  transform: rotate(315deg) ;
-  width: 8px;
-  height: 8px;
-}
-
+  &:global(.level-1){
+    text-decoration: none;  
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    border-bottom: 2px transparent solid;
+    padding: 12px 0;
+    display: block;
+    &:hover{
+      border-bottom-color: #1D1B1A;
+    }
+  } 
+}  
 .submenuContainer {
   position: absolute;
   left: 0;
   background-color: white;
-  padding: 15px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+  padding: 35px 20px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%; 
   z-index: 1000;
   @media(max-width:1024px){
     flex-direction: column;
+  }
+  @media(min-width:1024px){
+    &:before{
+      content: "";
+      background: rgba(0,0,0,.40);
+      width: 100%;
+      height: 1000%;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      pointer-events: none;
+    }
   }
 }
 
@@ -64,6 +67,10 @@
 
 .submenuItem {
   margin-bottom: 10px;
+  @media (min-width: 1024px) {
+    margin-right: 20px;
+    min-width: 105px;
+  }
 }
 
 .wrapper {
@@ -72,17 +79,25 @@
   padding: 0;
   @media (max-width: 1024px) {
     display: block;
-  }
-
-  
+  } 
 }
 
 .submenuWrapper {
   display: flex;
   list-style: none;
-  padding: 0;
+  padding: 0; 
+  .menuLink {
+    text-decoration: none;  
+    transition: color 0.3s ease;
+  } 
+  :global(.level-2){
+    flex-direction: column;
+  } 
   @media (max-width: 1024px) {
-    display: block;
+    display: block;    
+    .menuLink {
+      padding: 7px;  
+    } 
   }
 }
 
@@ -94,14 +109,34 @@
   padding: 0;
 
 }
-
+.bannerLink {
+  text-decoration: unset;
+}
 .bannerContainer {
-  margin-left: 20px;
-  margin-top: 10px;
+  margin: 0 0 0 40px; 
 }
 
 .bannerImage {
   height: auto;
+}
+
+.bannerText{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #1D1B1A;
+  font-family: 'FuturaBT-Heavy';
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submenuTitleCol{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: 'FuturaBT-Heavy';
+  margin-bottom: 8px;
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -109,26 +144,35 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
-  }
-
-
-
+  } 
   .menuItem {
     width: 100%;
   }
 
-  .menuLink {
-    justify-content: space-between;
-    padding: 15px;
-    width: 100%;
+  .menuLink { 
+    &:global(.level-1){
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      border-bottom: #ECEAE6 1px solid;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;  
+      padding: 16px 5px;  
+      margin: 0 15px; 
+      .submenuToggleIcon::after {
+        content: url('./plus.svg');
+        display: block;  
+      }
+    } 
   }
-
   .submenuContainer {
     position: static;
     flex-direction: column !important;
     padding: 10px 0;
     box-shadow: none;
     width: 100%;
+    background-color: #ECEAE6;
+    padding: 0 25px; 
   }
 
   .submenuItem {
@@ -145,13 +189,30 @@
     width: 100%;
     max-width: 300px;
   }
-
+  .submenuWrapper{ 
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    :global(li){
+      width: 48%;
+    }
+  }
   .submenuWrapper.level-1 {
     display: none;
     
   }
   .submenuWrapper.level-1.openSubmenu {
-    display: block;
-    
+    display: block; 
+  }
+  .menuItem--main-menu-header:global(.level-1){
+    width: 100%; 
+  }
+  .wrapper--main-menu-header{
+    width: 100%; 
+  }
+}
+@media (min-width: 769px) {  
+  .menuItem--main-menu-header:global(.level-1){
+    padding: 0 20px;  
   }
 }

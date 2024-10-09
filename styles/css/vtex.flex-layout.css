@@ -1,39 +1,6 @@
-.flexRowContent--menu-link,
-.flexRowContent--main-header {
-  padding: 0 0.5rem;
-}
-
-@media screen and (min-width: 40em) {
-  .flexRowContent--menu-link,
-  .flexRowContent--main-header {
-    padding: 0 1rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .flexRowContent--menu-link,
-  .flexRowContent--main-header {
-    padding: 0 0.25rem;
-  }
-}
-.flexRowContent--menu-link {
-  background-color: #03044e;
-  color: #fff;
-}
-
 .flexRowContent--main-header-mobile {
   align-items: center;
-  padding: 0.625rem 0.5rem;
-  background-color: #f0f0f0;
-}
-
-.flexRowContent--menu-link :global(.vtex-menu-2-x-styledLink) {
-  color: #ffffff;
-  font-size: 14px;
-}
-
-.flexRowContent--main-header :global(.vtex-menu-2-x-styledLink) {
-  color: #727273;
-  font-size: 14px;
+  padding: 10px 20px;
 }
 
 .flexRowContent--deals {
@@ -122,6 +89,12 @@
   gap: 30px;
 }
 
+.flexCol--row-with-gap-25 {
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
 .flexCol--row-with-gap-10 {
   flex-direction: row;
   gap: 10px;
@@ -150,11 +123,25 @@
   background-color: #F5F5F5;
 }
 
-.flexRow--trio-de-banners .text {
+.flexRow--trio-de-banners :global(.vtex-image-and-text-0-x-text) {
   font-size: 3.2rem;
   color: white;
   position: absolute;
   bottom: 0;
+  margin: 30px;
+  font-family: "FuturaBT-Book";
+  font-weight: normal;
+}
+.flexRow--trio-de-banners :global(.vtex-image-and-text-0-x-block) {
+  position: relative;
+}
+.flexRow--trio-de-banners :global(.vtex-image-and-text-0-x-gradient) {
+  background-image: linear-gradient(transparent 20%, rgba(29, 27, 26, 0.8));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .flexRowContent--contact {

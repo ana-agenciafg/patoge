@@ -1,0 +1,101 @@
+{ 
+    "sticky-layout#header-desktop": {
+        "children": [
+            "flex-layout.row#topo-header",
+            "flex-layout.row#main-header-desktop",
+            "flex-layout.row#3-desktop"
+        ],
+        "props": { 
+            "blockClass": "header"
+        }
+    }, 
+
+    "flex-layout.row#main-header-desktop": {
+        "props": { 
+            "paddingBottom": 4,
+            "paddingTop": 7,
+            "horizontalAlign": "center",
+            "preventHorizontalStretch": true,
+            "preventVerticalStretch": true,
+            "fullWidth": true
+        },
+        "children": ["flex-layout.col#logo-desktop"]
+    },
+    "flex-layout.row#3-desktop": {  
+        "props": { 
+        "horizontalAlign": "between",
+        "preventHorizontalStretch": true
+        },
+        "children": [
+            "flex-layout.col#header-row3-left",
+            "flex-layout.col#header-row3-center",
+            "flex-layout.col#header-row3-right"
+            // "search-bar", 
+            // "login",
+            // "minicart.v2"
+        ]
+    },
+
+    // esquerda 
+    "flex-layout.col#header-row3-left": {
+        "props": {
+            "blockClass": "row-with-gap-30",
+            "verticalAlign": "middle",
+            "horizontalAlign": "center"
+        },
+        "children": [
+            "image#header-row3-left-contato",
+            "image#header-row3-left-busca"
+        ]
+    }, 
+    "image#header-row3-left-contato": {
+        "props": {
+            "src": "assets/img/contato.svg",
+            "width": "24px",
+            "height": "21px"
+        }
+    },
+    "image#header-row3-left-busca": {
+        "props": {
+            "src": "assets/img/busca.svg",
+            "width": "21px",
+            "height": "21px"
+        }
+    },
+
+    // meio  
+    "flex-layout.col#header-row3-center": { 
+        "props": {
+            "verticalAlign": "middle",
+            "horizontalAlign": "center"
+        },
+        "children": ["AstinoMenu#news"]
+    },  
+    
+    // direita 
+    "flex-layout.col#header-row3-right": {
+        "props": {
+            "blockClass": ["row-with-gap-30", "header-row3-right"],
+            "verticalAlign": "middle",
+            "horizontalAlign": "center"
+        }, 
+        "children": [
+            "image#header-row3-left-favoritos",
+            "login",
+            "minicart.v2"
+        ]
+    }, 
+    "image#header-row3-left-favoritos": {
+        "props": {
+            "src": "assets/img/coracao.svg",
+            "width": "24px",
+            "height": "21px"
+        }
+    }, 
+    "flex-layout.col#logo-desktop": {
+        "props": {
+            "verticalAlign": "middle"
+        },
+        "children": ["logo#header-logo"]
+    }
+}

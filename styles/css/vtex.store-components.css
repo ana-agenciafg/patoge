@@ -6,6 +6,10 @@
   text-decoration: underline;
 }
 
+.logoContainer {
+  padding: 0;
+}
+
 .infoCardContainer--info-card-home {
   max-width: 1520px;
   margin: 0 auto;
