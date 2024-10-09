@@ -284,7 +284,7 @@ AstinoMenu.schema = {
           },
           bold: {
             type: "boolean",
-            title: "Ativar negrito?",
+            title: "Texto em negrito?",
             default: false,
           },
           hasSubmenu: {
@@ -294,7 +294,7 @@ AstinoMenu.schema = {
           },
           submenuLinks: {
             type: "array",
-            title: "Links do Submenu",
+            title: "Coluna do Submenu",
             items: {
               type: "object",
               properties: {
@@ -304,7 +304,7 @@ AstinoMenu.schema = {
                 },
                 text: {
                   type: "string",
-                  title: "Texto do Link",
+                  title: "Título da coluna",
                   default: "Submenu Link",
                 },
                 url: {
@@ -314,12 +314,12 @@ AstinoMenu.schema = {
                 },
                 hasSubmenu: {
                   type: "boolean",
-                  title: "Este link possui outro submenu?",
-                  default: false,
+                  title: "Mostrar coluna?",
+                  default: true,
                 },
                 submenuLinks: {
                   type: "array",
-                  title: "Links do Submenu Aninhado",
+                  title: "Links do Submenu",
                   items: {
                     type: "object",
                     properties: {
