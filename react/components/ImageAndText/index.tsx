@@ -2,7 +2,6 @@ import React from 'react'
 
 interface ImageAndTextProps {
   image: string
-  imageMobile: string
   alt?: string
   link?: string
   openInNewTab?: boolean
@@ -15,7 +14,6 @@ interface ImageAndTextProps {
 
 const ImageAndText = ({ 
   image,
-  imageMobile,
   alt,
   link,
   openInNewTab = false,
@@ -70,13 +68,6 @@ ImageAndText.schema = {
   properties: {
     image: {
       title: 'Imagem',
-      type: 'string',
-      widget: {
-        'ui:widget': 'image-uploader',
-      },
-    },
-    imageMobile: {
-      title: 'Imagem Mobile',
       type: 'string',
       widget: {
         'ui:widget': 'image-uploader',
