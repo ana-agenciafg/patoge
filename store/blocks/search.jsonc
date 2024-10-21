@@ -62,6 +62,7 @@
 
   "search-result-layout.desktop": {
     "children": [
+      "flex-layout.row#banner-top-category-desktop",
       "flex-layout.row#searchbread",
       "flex-layout.row#searchtitle",
       "flex-layout.row#result"
@@ -72,6 +73,32 @@
       "defaultGalleryLayout": "grid"
     }
   },
+  "flex-layout.row#banner-top-category-desktop": {
+    "title": "Banner Topo Desktop",
+    "children": ["image#banner-top-category-desktop"],
+    "props": { 
+      "fullWidth": true
+    }
+  },
+  "image#banner-top-category-desktop": { 
+    "props": {
+      "src": "" 
+    }
+  },
+
+  "flex-layout.row#banner-top-category-mobile": {
+    "title": "Banner Topo Mobile",
+    "children": ["image#banner-top-category-mobile"],
+    "props": { 
+      "fullWidth": true
+    }
+  },
+  "image#banner-top-category-mobile": { 
+    "props": {
+      "src": "" 
+    }
+  },
+
   "flex-layout.row#searchbread": {
     "children": ["breadcrumb.search"],
     "props": {
@@ -156,6 +183,7 @@
 
   "search-result-layout.mobile": {
     "children": [
+      "flex-layout.row#banner-top-category-mobile",
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
       "flex-layout.row#productCountMobile",

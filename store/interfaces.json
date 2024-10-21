@@ -16,5 +16,8 @@
     },
     "list-image-and-text": {
         "component": "ListImageAndText"
+    },
+    "aviso-de-cookies": {
+        "component": "CookieConsent"
     } 
 }
