@@ -1,25 +1,37 @@
 {
-  "flex-layout.row#footer-1-desktop": {
+  "flex-layout.row#footer-1": {
     "children": [ 
       "voltar-ao-topo",
       "flex-layout.col#footer-newsletter-col1",
       "flex-layout.col#footer-newsletter-col2"
     ],
     "props": {
-      "blockClass": "footer-newsletter"
+      "blockClass": "footer-newsletter",
+      "horizontalAlign": "between",
+      "paddingTop": 6,
+      "paddingBottom": 6,
+      "colSizing": "auto"
     }
   },
   "flex-layout.col#footer-newsletter-col1": {
-    "children": ["rich-text#footer-newsletter-text"] 
+    "children": ["rich-text#footer-newsletter-text"],
+    "props": {
+      "verticalAlign": "middle",
+      "width": "30%"
+    }
   },
   "rich-text#footer-newsletter-text": {
     "props": { 
-      "text": "**ASSINE NOSSA NEWSLETTER** <br>Não perca as novidades e promoções!",
+      "text": "**ASSINE NOSSA NEWSLETTER** <br>NÃO PERCA AS NOVIDADES E PROMOÇÕES!",
       "font": "t-heading-4",
-      "textColor": "on-base-inverted"
+      "blockClass": "footer-newsletter-text"
     }
   },
   "flex-layout.col#footer-newsletter-col2": {
-    "children": ["newsletter"] 
+    "children": ["custom-newsletter"],
+    "props": {
+      "verticalAlign": "middle",
+      "width": "65%"
+    }
   }
 }

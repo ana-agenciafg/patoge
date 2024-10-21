@@ -1,5 +1,6 @@
 {  
     "flex-layout.row#header-row3-left-contato": {
+        "title": "Contatos no Topo",
         "props": {
             "blockClass": ["header-contato","row-with-gap-30"],
             "preventHorizontalStretch": true 
@@ -9,6 +10,28 @@
             "flex-layout.col#header-row3-left-contato-content"
         ]
     }, 
+
+    "flex-layout.row#content-contato-fixo": {
+        "title": "Contatos Fixos Lateral",
+        "props": {
+            "blockClass": ["header-contato","row-with-gap-30"],
+            "preventHorizontalStretch": true 
+        },
+        "children": ["flex-layout.col#content-contato-fixo"]
+    }, 
+    
+    "flex-layout.col#content-contato-fixo": {
+        "props": {
+            "blockClass": "content-contato-fixo" 
+        },
+        "children": [
+            "rich-text#header-contatos-whatsapp",
+            "rich-text#header-contatos-lojas",
+            "rich-text#header-contatos-devolucoes",
+            "rich-text#header-contatos-duvidas"
+        ]
+    }, 
+    
     "flex-layout.col#header-row3-left-contato-content": {
         "props": {
             "blockClass": "header-contato-content" 
@@ -27,28 +50,57 @@
             "height": "21px"
         }
     },
+
     "rich-text#header-contatos-whatsapp": {
+        "title": "Box Contatos - Compre pelo Whatsapp",
         "props": {
             "text": "[Compre pelo Whatsapp](https://api.whatsapp.com/send/?phone=5531971447720&text&type=phone_number&app_absent=0)",
             "blockClass": ["header-contato-content", "header-contato-content-whatsapp"] 
         }
     },
     "rich-text#header-contatos-lojas": {
+        "title": "Box Contatos - Encontrar Lojas",
         "props": {
             "text": "[Encontrar Lojas](/onde-encontrar/)",
             "blockClass": ["header-contato-content", "header-contato-content-lojas"]  
         }
     },
     "rich-text#header-contatos-devolucoes": {
+        "title": "Box Contatos - Devoluções",
         "props": {
             "text": "[Devoluções](/institucional/devolucoes)",
             "blockClass": ["header-contato-content", "header-contato-content-devolucoes"]  
         }
     },
     "rich-text#header-contatos-duvidas": {
+        "title": "Box Contatos - Dúvidas",
         "props": {
             "text": "[Dúvidas Frequentes](/institucional/duvidas)",
             "blockClass": ["header-contato-content", "header-contato-content-duvidas"]  
+        }
+    },
+
+
+    "flex-layout.row#contato-fixo": {
+        "children": ["disclosure-layout#contato-fixo"],
+        "props": { 
+            "blockClass": "contato-fixo"
+        }
+    },
+    "disclosure-layout#contato-fixo": {
+        "children": ["disclosure-trigger#contato-fixo", "disclosure-content#contato-fixo"]
+    },
+    "disclosure-trigger#contato-fixo": {
+        "children": ["image#contato-fixo"]
+    },
+    "disclosure-content#contato-fixo": {
+        "children": ["flex-layout.row#content-contato-fixo"]
+    },
+    "image#contato-fixo": {
+        "props": {
+            "src": "assets/img/contato-branco.svg",
+            "width": "27px",
+            "height": "20px"
         }
     }
 }

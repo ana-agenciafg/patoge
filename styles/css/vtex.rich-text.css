@@ -80,6 +80,11 @@
 .paragraph--footer-copyright {
   font-size: 1.1rem;
 }
+@media (max-width: 769px) {
+  .paragraph--footer-copyright {
+    margin-bottom: 20px;
+  }
+}
 
 .wrapper--header-contato-content {
   width: 100%;
@@ -97,6 +102,9 @@
 .paragraph--header-contato-content .link {
   text-decoration: unset;
   color: initial;
+}
+.paragraph--header-contato-content .link:hover {
+  font-family: "FuturaBT-Medium";
 }
 .paragraph--header-contato-content::after {
   content: "";
@@ -127,6 +135,79 @@
 
 .paragraph--header-contato-content-duvidas::before {
   content: url(assets/img/duvidas.svg);
+}
+
+.paragraph--footer-newsletter-text {
+  color: white;
+}
+@media (min-width: 770px) {
+  .paragraph--footer-newsletter-text {
+    font-size: 1.6rem;
+  }
+  .paragraph--footer-newsletter-text .strong {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 769px) {
+  .paragraph--footer-newsletter-text {
+    font-size: 1.4rem;
+  }
+  .paragraph--footer-newsletter-text .strong {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .container--footer-newsletter-text {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.wrapper--footer-whatsapp {
+  padding-left: 30px;
+  position: relative;
+  margin-top: 5px;
+}
+.wrapper--footer-whatsapp::before {
+  content: url(assets/img/whatsapp.svg);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrapper--footer-whatsapp .paragraph {
+  margin: 0;
+}
+.wrapper--footer-whatsapp .link {
+  color: initial;
+  display: block;
+}
+
+.paragraph--shelf-link {
+  margin-top: 5px;
+}
+
+.container--title-minicart {
+  margin: 0 auto;
+}
+.container--title-minicart .paragraph {
+  font-family: "FuturaBT-Heavy";
+}
+
+.paragraph--home-slide-de-banners-titulo, .heading--home-slide-de-banners-titulo {
+  font-family: "FuturaBT-Light";
+  margin: 0;
+  text-transform: uppercase;
+}
+@media (min-width: 770px) {
+  .paragraph--home-slide-de-banners-titulo, .heading--home-slide-de-banners-titulo {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 769px) {
+  .paragraph--home-slide-de-banners-titulo, .heading--home-slide-de-banners-titulo {
+    font-size: 2rem;
+  }
 }
 
 .container--layout-option {

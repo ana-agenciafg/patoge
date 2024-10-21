@@ -1,18 +1,35 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#fullbanner-home",
-      /* You can make references to blocks defined in other files.
-       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
+      "responsive-layout.desktop#home",
+      "responsive-layout.mobile#home"
+    ]
+  },
+
+  "responsive-layout.desktop#home": {
+    "children": [
+      "list-context.image-list#fullbanner-home", 
       "__fold__",
-      "flex-layout.row#home-duplo-banners",
+      "flex-layout.row#home-duplo-banners", 
+      "flex-layout.row#home-slide-de-banners",
       "flex-layout.row#trio-de-banners",
       "flex-layout.row#shelf-title",
       "flex-layout.row#shelf", 
       "flex-layout.row#deals"
-    ]
+    ]    
   },
 
+  "responsive-layout.mobile#home": {
+    "children": [
+      "list-context.image-list#fullbanner-home", 
+      "__fold__",
+      "flex-layout.row#home-duplo-banners",
+      "flex-layout.row#trio-de-banners-mobile", 
+      "flex-layout.row#shelf-title",
+      "flex-layout.row#shelf", 
+      "slider-layout#deals-mobile"
+    ]    
+  },
 
   // FULLBANNER 
   "list-context.image-list#fullbanner-home": {
@@ -49,40 +66,6 @@
       "showNavigationArrows": "always",
       "blockClass": "carousel-fullbanner-home"
     }
-  },
-  // FIM - FULLBANNER 
-  
-
-  "flex-layout.row#shelf-title": {
-    "children": ["rich-text#shelf-title"]
-  },
-  "rich-text#shelf-title": {
-    "props": {
-      "text": "## New in",
-      "blockClass": "shelfTitle"
-    }
-  },
-  "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
-  },
-  "list-context.product-list#demo1": {
-    "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
-    "props": {
-      "orderBy": "OrderByTopSaleDESC"
-    }
-  },
-  "slider-layout#demo-products": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 4,
-        "tablet": 3,
-        "phone": 1
-      },
-      "infinite": true,
-      "showPaginationDots": false,
-      "fullWidth": false,
-      "blockClass": "shelf"
-    }
-  } 
+  }
+  // FIM - FULLBANNER  
 }

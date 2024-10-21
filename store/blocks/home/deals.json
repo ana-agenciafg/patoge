@@ -1,4 +1,66 @@
 {
+  "slider-layout#deals-mobile": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 3000
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "blockClass": "deals-mobile"
+    },
+    "children": [
+      "flex-layout.row#deals1",
+      "flex-layout.row#deals2",
+      "flex-layout.row#deals3",
+      "flex-layout.row#deals4"
+    ]
+  },
+  "flex-layout.row#deals1": {
+    "children": [
+      "image#deal1",
+      "rich-text#deal1"
+    ],
+    "props": { 
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#deals2": {
+    "children": [
+      "image#deal2",
+      "rich-text#deal2"
+    ],
+    "props": { 
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#deals3": {
+    "children": [
+      "image#deal3",
+      "rich-text#deal3"
+    ],
+    "props": { 
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#deals4": {
+    "children": [
+      "image#deal4",
+      "rich-text#deal4"
+    ],
+    "props": { 
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
   "flex-layout.row#deals": {
     "children": [
       "flex-layout.col#deals1",
@@ -8,7 +70,7 @@
     ],
     "props": {
       "blockClass": "deals",
-      "marginBottom": 9,
+      "marginBottom": 10,
       "marginTop": 9,
       "paddingBottom": 8,
       "paddingTop": 8,

@@ -10,5 +10,11 @@
     },
     "image-and-text": {
         "component": "ImageAndText"
+    },
+    "custom-newsletter": {
+        "component": "NewsletterForm"
+    },
+    "list-image-and-text": {
+        "component": "ListImageAndText"
     } 
 }

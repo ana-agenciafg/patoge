@@ -1,5 +1,8 @@
 :global(#btn-volta-ao-topo){
+    background-image: url(./voltar.svg);
     background-color: #ECEAE6;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 0;
     padding: 0;
     cursor: pointer;
@@ -11,5 +14,5 @@
     justify-content: center;
     position: absolute;
     top: -25px;
-    right: 30px;
+    right: 20px;
 }

@@ -5,16 +5,56 @@
       "customPixelEventId": "add-to-cart-button"
     }
   },
+  "minicart.v2#only-quantity": {
+    "props": {
+      "quantityDisplay": "always"
+    } 
+  },
+  "icon-cart#minicart-icon": {
+    "props": {
+      "size": 24
+    }
+  },
 
   "minicart.v2": {
     "props": {
-      "customPixelEventId": "add-to-cart-button"
+      "customPixelEventId": "add-to-cart-button" 
     },
     "children": ["minicart-base-content"]
   },
   "minicart-base-content": {
     "blocks": ["minicart-empty-state"],
-    "children": ["minicart-product-list", "flex-layout.row#minicart-footer"]
+    "children": [
+      "flex-layout.row#minicart-header",
+      "minicart-product-list", 
+      "flex-layout.row#minicart-footer"
+    ]
+  },
+  
+  "flex-layout.row#minicart-header": {
+    "props": {
+      "blockClass": "minicart-header",
+      "preventHorizontalStretch": true, 
+      "preserveLayoutOnMobile": true,
+      "marginBottom": 5
+    },
+    "children": [
+      "minicart.v2#only-quantity",
+      "rich-text#minicart-header",
+      "flex-layout.col#spacer"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "rich-text#minicart-header": {
+    "title": "title-minicart",
+    "props": {
+      "text": "MINHA SACOLA",
+      "blockClass": "title-minicart"
+    }
   },
   "flex-layout.row#minicart-footer": {
     "props": {
@@ -23,12 +63,119 @@
     "children": ["flex-layout.col#minicart-footer"]
   },
   "flex-layout.col#minicart-footer": {
-    "children": ["minicart-summary", "minicart-checkout-button"]
+    "children": ["minicart-summary", "minicart-checkout-button#custom","drawer-close-button#close-minicart"]
   },
   "minicart-product-list": {
     "blocks": ["product-list#minicart"],
     "props": {
       "splitItem": false
+    }
+  },
+  "drawer-close-button#close-minicart": {
+    "props": {
+      "text": "Continuar comprando",
+      "blockClass": "continue-buy"
+    }
+  },
+  "minicart-checkout-button#custom": {
+    "props": {
+      "finishShoppingButtonLink": "/checkout/#/orderform"
+    }
+  },
+  
+  "minicart-empty-state": {
+    "title": "Carrinho Vazio ",
+    "children": [
+      "flex-layout.row#minicart-header",
+      "flex-layout.row#empty-state",
+      "flex-layout.row#empty-state2"
+    ]
+  },
+  "flex-layout.row#empty-state": {
+    "title": "Carrinho Vazio ",
+    "children": [
+      "flex-layout.col#empty-state" 
+    ],
+    "props": { 
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#empty-state2": {
+    "title": "Carrinho Vazio ",
+    "children": [ 
+      "flex-layout.col#empty-state2"
+    ],
+    "props": { 
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#empty-state": {
+    "title": "Carrinho Vazio ",
+    "children": [ 
+      "rich-text#minicart-default-empty-state-title"
+    ],
+    "props": {
+      "horizontalAlign": "center" 
+    }
+  },
+  "flex-layout.col#empty-state2": {
+    "title": "Carrinho Vazio ",
+    "children": [  
+      "vtex.menu@2.x:menu#carrinho-vazio"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "empty-state2"
+    }
+  },
+  "rich-text#minicart-default-empty-state-title": {
+    "props": {
+      "text": "### SACOLA VAZIA \n \n Que tal começar com uma \n de nossas categorias?",
+      "blockClass": "empty-state-title",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "vtex.menu@2.x:menu#carrinho-vazio": {
+    "props": {
+        "orientation": "vertical",
+        "blockClass": "carrinho-vazio",
+        "items": [
+            { 
+                "type": "custom",
+                "highlight": false,
+                "itemProps": {
+                    "type": "internal",
+                    "href": "/feminino/calcas",
+                    "noFollow": false,
+                    "tagTitle": "CALÇAS FEMININAS",
+                    "text": "CALÇAS FEMININAS"
+                }
+            },
+            { 
+                "type": "custom",
+                "highlight": false,
+                "itemProps": {
+                    "type": "external",
+                    "href": "/masculino/calcas",
+                    "noFollow": false,
+                    "tagTitle": "CALÇAS MASCULINAS",
+                    "text": "CALÇAS MASCULINAS"
+                }
+            },
+            { 
+                "type": "custom",
+                "highlight": false,
+                "itemProps": {
+                    "type": "internal",
+                    "href": "/acessorios",
+                    "noFollow": false,
+                    "tagTitle": "ACESSÓRIOS",
+                    "text": "ACESSÓRIOS"
+                }
+            } 
+        ]
     }
   }
 }

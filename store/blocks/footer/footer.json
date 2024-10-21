@@ -4,36 +4,17 @@
   },
   "footer-layout.desktop": {
     "children": [ 
-      "flex-layout.row#footer-1-desktop",
+      "flex-layout.row#footer-1",
       "flex-layout.row#footer-2-desktop",
-      "flex-layout.row#footer-3-desktop"
+      "flex-layout.row#footer-3"
     ]
   }, 
 
   "footer-layout.mobile": {
-    "children": [ 
-      "flex-layout.row#2-footer-mobile"
+    "children": [  
+      "flex-layout.row#footer-1",
+      "flex-layout.row#footer-2-mobile",
+      "flex-layout.row#footer-3"
     ]
-  },
-  "flex-layout.row#2-footer-mobile": {
-    "children": ["flex-layout.col#footer-1-mobile"],
-    "props": {
-      "blockClass": "payment-methods",
-      "paddingTop": 4,
-      "paddingBottom": 4
-    }
-  },
-  "flex-layout.col#footer-1-mobile": {
-    "children": [
-      "accepted-payment-methods",
-      "social-networks",
-      "rich-text#footer-copyright"
-    ],
-    "props": {
-      "blockClass": "payment-methods",
-      "paddingTop": 4,
-      "paddingBottom": 4,
-      "rowGap": 4
-    }
-  }
+  } 
 }

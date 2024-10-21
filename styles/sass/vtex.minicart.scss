@@ -1,14 +1,25 @@
+.overlay {
+    background-color: #1D1B1A;
+}
+.drawerContent {
+    padding-top: 50px
+}
 .cartIcon{
     display: none;
 }
-.minicartIconContainer::before {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 21px;
-    background-image: url('assets/img/sacola.svg');
-    background-size: contain;
-    background-repeat: no-repeat; 
+.minicartIconContainer{
+    :global(.vtex-store-icons-0-x-cartIcon){
+        display: none;
+    }
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 21px;
+        background-image: url('assets/img/sacola.svg');
+        background-size: contain;
+        background-repeat: no-repeat; 
+    }
 }
 
 .minicartQuantityBadge{
@@ -20,10 +31,76 @@
 
 .openIconContainer{
     padding: 0;
+    :global(.vtex-button){
+        background-color: transparent !important;
+    }
+}
+.minicartTitle {
+    display: none; 
+}
+
+.closeIconContainer{
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .minicartIconContainer {
     display: flex;
     align-items: center;
     gap: 3px;
+} 
+.minicartProductListContainer {
+    padding: 0 20px; 
+    :global(.vtex-product-list-0-x-productName){
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+    :global(.vtex-product-list-0-x-productBrandName){
+        display: none;
+    }
+    :global(.vtex-product-list-0-x-productVariationsContainer){
+        display: flex;
+        gap: 10px;
+        margin-top: 7px;
+        :global(.vtex-product-list-0-x-productVariationsItem) {
+            font-size: 1.2rem;
+        }
+        :global(.vtex-product-list-0-x-productVariationsItem):not(:last-child)::after{
+            content: "/";
+        }
+    }
+    :global(.vtex-product-list-0-x-price){
+        font-size: 1.4rem;
+    }
+    :global(.vtex-product-list-0-x-deleteIcon){
+        display: none;
+    }
+    :global(.vtex-product-list-0-x-removeButton)::before{
+        content: url("assets/img/lixo.svg");
+    } 
+    :global(.vtex-product-list-0-x-quantitySelectorContainer){
+        position: absolute;
+        right: 20px;
+        margin-top: 24px;
+    }
+}
+
+.minicartCheckoutButton {
+    :global(.vtex-checkout-summary-0-x-summarySmallDisclaimer) {
+        display: none;
+    }
+    :global(.vtex-button ){
+        padding: 12px;
+    }
+    :global(.vtex-button__label){
+        font-size: 0;
+        font-family: "FuturaBT-Medium";
+        &::before{
+            content: "FINALIZAR COMPRA";
+            font-family: "FuturaBT-Medium";
+            letter-spacing: 1px;
+            font-size: 1.4rem;
+        }
+    }
 }

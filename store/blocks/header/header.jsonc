@@ -14,7 +14,7 @@
     "children": ["sticky-layout#header-mobile"]
   },
 
-  "flex-layout.col#spacer": {
+  "flex-layout.col#": {
     "props": {
       "width": "grow"
     }

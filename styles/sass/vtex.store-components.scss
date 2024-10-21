@@ -93,3 +93,19 @@
 .imageElement--w-full{
   width: 100%;
 }
+.container{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sizeMobile{
+  max-width: unset;
+  max-height: unset;
+  min-width: unset;
+  height: 25px;
+  overflow: hidden;
+  display: block;
+  :global(.vtex-store-components-3-x-logoImage){
+    margin-top: -1px;
+  }
+}

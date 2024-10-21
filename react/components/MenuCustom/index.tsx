@@ -78,9 +78,10 @@ export const AstinoMenu = (props: Props) => {
 
     return (
       <ul 
-        className={`${handles.submenuWrapper} level-${level} ${
-          openSubmenus.includes(parentIndexPath) ? handles.openSubmenu : ""
-        }`}
+        className={`${handles.submenuWrapper} level-${level} 
+          ${submenuLinks.length > 7 ? "divide-coluna" : "coluna-normal" }
+          ${openSubmenus.includes(parentIndexPath) ? handles.openSubmenu : ""}`}
+        data-itens={submenuLinks.length}
       >
         {submenuLinks.map((submenuLink, subIndex) => {
           const currentPath = `${parentIndexPath}-${subIndex}`;

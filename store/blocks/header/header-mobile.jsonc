@@ -1,6 +1,9 @@
 {  
     "sticky-layout#header-mobile": {
-        "children": ["flex-layout.row#header-mobile"],
+        "children": [
+            "flex-layout.row#header-mobile",
+            "flex-layout.row#contato-fixo"
+        ],
         "props": { 
         "blockClass": "header"
         }
@@ -20,14 +23,15 @@
 
     "drawer#header-mobile": {
         "props":{
-            "blockClass":"drawer__mobile",
+            "blockClass":"drawer_header_mobile",
             "maxWidth":"90%"
         },
-        "children": ["AstinoMenu#news"]
-    },
+        "children": ["login","AstinoMenu#news"]
+    }, 
+
     "flex-layout.col#header-col1-mobile": {
         "props": {
-            "blockClass": "row-with-gap-25" 
+            "blockClass": ["row-with-gap-25", "invert-color"]
         },
         "children": [
             "drawer#header-mobile",
@@ -42,7 +46,8 @@
     },
     "flex-layout.col#header-col3-mobile": {
         "props": {
-            "verticalAlign": "middle"
+            "verticalAlign": "middle",
+            "blockClass": "invert-color"
         },
         "children": ["minicart.v2"]
     }

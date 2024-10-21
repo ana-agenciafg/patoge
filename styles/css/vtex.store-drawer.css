@@ -1,10 +1,47 @@
-.menuIcon--drawer__mobile {
+.menuIcon--drawer_header_mobile {
   display: none;
 }
 
-.openIconContainer--drawer__mobile {
+.openIconContainer--drawer_header_mobile {
   padding: 0;
 }
-.openIconContainer--drawer__mobile::before {
+.openIconContainer--drawer_header_mobile::before {
   content: url(assets/img/drawer-mobile.svg);
+}
+
+.closeIconButton--drawer_header_mobile {
+  position: absolute;
+  right: 0;
+}
+
+.drawerContent--drawer_header_mobile .childrenContainer--drawer_header_mobile {
+  flex-direction: column;
+}
+.drawerContent--drawer_header_mobile :global(.vtex-login-2-x-profile) {
+  display: flex;
+  align-items: center;
+  max-width: unset;
+  color: #1D1B1A;
+  font-size: 1.4rem;
+  font-family: "FuturaBT-Book";
+  text-transform: unset;
+  font-weight: normal;
+}
+.drawerContent--drawer_header_mobile :global(.vtex-login-2-x-profile)::before {
+  content: url(assets/img/ic-user.svg);
+  margin-right: 15px;
+  display: inline-block;
+}
+.drawerContent--drawer_header_mobile :global(.vtex-login-2-x-container) {
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.closeIconButton--continue-buy {
+  font-family: "FuturaBT-Heavy";
+  text-decoration: underline;
+  margin: 0 auto;
+  display: block;
 }

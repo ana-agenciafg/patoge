@@ -1,0 +1,11 @@
+.menuContainerNav--carrinho-vazio .styledLink {
+  border: 1px solid #1D1B1A;
+  padding: 11px 8px;
+  display: block;
+  margin: 5px 0;
+}
+.menuContainerNav--carrinho-vazio .styledLinkContent {
+  font-family: "FuturaBT-Heavy";
+  text-align: center;
+  display: block;
+}

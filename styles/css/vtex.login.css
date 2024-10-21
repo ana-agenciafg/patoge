@@ -15,11 +15,45 @@ html {
   background-image: linear-gradient(to bottom, rgba(29, 27, 26, 0.8), rgba(29, 27, 26, 0.4), transparent);
   background-color: transparent;
 }
-:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--header):not(:global(.vtex-sticky-layout-0-x-wrapper--stuck)) :global(.vtex-sticky-layout-0-x-container):not(:hover) :global(.vtex-flex-layout-0-x-flexRow) {
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--header):not(:global(.vtex-sticky-layout-0-x-wrapper--stuck)) :global(.vtex-sticky-layout-0-x-container):not(:hover) :global(.vtex-flex-layout-0-x-flexCol--invert-color), :global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--header):not(:global(.vtex-sticky-layout-0-x-wrapper--stuck)) :global(.vtex-sticky-layout-0-x-container):not(:hover) :global(.vtex-store-components-3-x-logoLink) {
   filter: invert(1);
 }
 @media (min-width: 770px) {
+  :global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--header):not(:global(.vtex-sticky-layout-0-x-wrapper--stuck)) :global(.vtex-sticky-layout-0-x-container):not(:hover) :global(.patoge-patoge-0-x-menuLink--main-menu-header) {
+    color: #11100f !important;
+    filter: invert(1);
+    font-family: "FuturaBT-Medium";
+  }
   :global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--header):not(:global(.vtex-sticky-layout-0-x-wrapper--stuck)) :global(.vtex-sticky-layout-0-x-container) {
     top: -31px !important;
   }
+}
+
+.portalWrapper--header .contentContainer {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 9px;
+  width: 300px;
+}
+.portalWrapper--header .arrowUp {
+  display: none;
+}
+.portalWrapper--header .accessCodeOptionBtn :global(.vtex-button) {
+  background-color: #11100f;
+}
+.portalWrapper--header .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
+  color: white;
+}
+.portalWrapper--header .sendButton :global(.t-small) {
+  color: white;
+}
+.portalWrapper--header :global(.t-small) {
+  font-family: "FuturaBT-Book";
+}
+.portalWrapper--header :global(.vtex-button) {
+  height: 40px;
+}
+.portalWrapper--header :global(.vtex-button__label), .portalWrapper--header .oauthLabel {
+  font-size: 1.2rem;
+  font-family: "FuturaBT-Book";
+  color: #11100f;
 }

@@ -7,7 +7,21 @@
             "flex-layout.col#footer-2-col4"
         ],
         "props": {
-            "blockClass": "payment-methods",
+            "blockClass": "footer-2-desktop",
+            "paddingTop": 8,
+            "paddingBottom": 8
+        }
+    }, 
+    "flex-layout.row#footer-2-mobile": {
+        "children": [
+            "flex-layout.col#footer-2-redes-sociais-mobile",
+            "flex-layout.col#footer-disclosure-1-mobile", 
+            "flex-layout.col#footer-disclosure-2-mobile", 
+            "flex-layout.col#footer-disclosure-3-mobile", 
+            "flex-layout.col#footer-disclosure-4-mobile" 
+        ],
+        "props": { 
+            "blockClass": "footer-2-mobile",
             "paddingTop": 8,
             "paddingBottom": 8
         }
@@ -33,7 +47,8 @@
     "flex-layout.col#footer-2-col3": {
         "children": [
             "rich-text#footer-2-col3-title",
-            "vtex.menu@2.x:menu#footer_menu-3"
+            "vtex.menu@2.x:menu#footer_menu-3",
+            "rich-text#footer-2-col3-whatsapp"
         ],
         "props": {
             "preventVerticalStretch": true
@@ -42,12 +57,14 @@
     "flex-layout.col#footer-2-col4": {
         "children": [
             "rich-text#footer-2-col4-title",
-            "flex-layout.row#footer-redes-sociais"
+            "flex-layout.row#footer-redes-sociais",
+            "rich-text#footer-2-col4-title-2",
+            "flex-layout.row#footer-pagamentos"
         ],
         "props": {
             "preventVerticalStretch": true
         }
-    }, 
+    },  
     
     "flex-layout.row#footer-redes-sociais": {
         "children": [ 
@@ -58,36 +75,65 @@
             "image#footer-redes-sociais-5"
         ],
         "props": {
+            "preserveLayoutOnMobile": true,
             "preventHorizontalStretch": true,
-            "colGap": 7
+            "colGap": 7,
+            "marginTop": 6,
+            "marginBottom": 8
         } 
     },
+ 
     // CONTEÚDOS
+    "rich-text#footer-2-col3-whatsapp": {
+        "props": {
+            "text": "**Whatsapp SAC** [(31) 9.7144-7720](https://api.whatsapp.com/send/?phone=5531971447720)",
+            "blockClass": "footer-whatsapp"
+        }
+    },
+
     "rich-text#footer-2-col1-title": {
         "props": {
-            "text": "INSTITUCIONAL",
+            "text": "**INSTITUCIONAL**",
             "blockClass": "footer-title"
         }
     },
     
     "rich-text#footer-2-col2-title": {
         "props": {
-            "text": "SUPORTE",
+            "text": "**SUPORTE**",
             "blockClass": "footer-title"
         }
     }, 
     
     "rich-text#footer-2-col3-title": {
         "props": {
-            "text": "CONTATO",
+            "text": "**CONTATO**",
             "blockClass": "footer-title"
         }
     },
 
     "rich-text#footer-2-col4-title": {
         "props": {
-            "text": "Siga a @patogeoficial",
+            "text": "SIGA A **@PATOGEOFICIAL**",
             "blockClass": "footer-title"
+        }
+    },
+
+    "rich-text#footer-2-col4-title-2": {
+        "props": {
+            "text": "**MEIOS DE PAGAMENTO**",
+            "blockClass": "footer-title"
+        }
+    },
+    "flex-layout.row#footer-pagamentos": {
+        "children": [ "image#footer-2-col4-pagamentos"],
+        "props": { 
+            "marginTop": 6 
+        } 
+    },
+    "image#footer-2-col4-pagamentos": { 
+        "props": {
+            "src": "assets/img/pagamentos.png" 
         }
     },
 
@@ -262,5 +308,80 @@
                 "openNewTab": true
             }
         }
+    },
+
+    // MOBILE 
+    "flex-layout.col#footer-2-redes-sociais-mobile": {
+        "children": [
+            "rich-text#footer-2-col4-title",
+            "flex-layout.row#footer-redes-sociais" 
+        ],
+        "props": {
+            "blockClass": "footer-2-redes-sociais-mobile",
+            "preventVerticalStretch": true
+        }
+    }, 
+    "flex-layout.col#footer-disclosure-1-mobile": {
+        "children": ["disclosure-layout#footer-1-mobile"]
+    },
+    "disclosure-layout#footer-1-mobile": {
+        "children": ["disclosure-trigger#footer-1-mobile", "disclosure-content#footer-1-mobile"],
+        "props": {
+            "blockClass": "footer-mobile" 
+        }
+    },
+    "disclosure-trigger#footer-1-mobile": {
+        "children": ["rich-text#footer-2-col1-title"]
+    },
+    "disclosure-content#footer-1-mobile": {
+        "children": ["vtex.menu@2.x:menu#footer_menu-1"]
+    }, 
+
+    "flex-layout.col#footer-disclosure-2-mobile": {
+        "children": ["disclosure-layout#footer-2-mobile"]
+    },
+    "disclosure-layout#footer-2-mobile": {
+        "children": ["disclosure-trigger#footer-2-mobile", "disclosure-content#footer-2-mobile"],
+        "props": {
+            "blockClass": "footer-mobile" 
+        }
+    },
+    "disclosure-trigger#footer-2-mobile": {
+        "children": ["rich-text#footer-2-col2-title"]
+    },
+    "disclosure-content#footer-2-mobile": {
+        "children": ["vtex.menu@2.x:menu#footer_menu-2"]
+    }, 
+
+    "flex-layout.col#footer-disclosure-3-mobile": {
+        "children": ["disclosure-layout#footer-3-mobile"]
+    },
+    "disclosure-layout#footer-3-mobile": {
+        "children": ["disclosure-trigger#footer-3-mobile", "disclosure-content#footer-3-mobile"],
+        "props": {
+            "blockClass": "footer-mobile" 
+        }
+    },
+    "disclosure-trigger#footer-3-mobile": {
+        "children": ["rich-text#footer-2-col3-title" ]
+    },
+    "disclosure-content#footer-3-mobile": {
+        "children": [
+            "vtex.menu@2.x:menu#footer_menu-3",
+            "rich-text#footer-2-col3-whatsapp"
+        ]
+    }, 
+
+    "flex-layout.col#footer-disclosure-4-mobile": {
+        "children": ["disclosure-layout#footer-4-mobile"]
+    },
+    "disclosure-layout#footer-4-mobile": {
+        "children": ["disclosure-trigger#footer-4-mobile", "disclosure-content#footer-4-mobile"]
+    },
+    "disclosure-trigger#footer-4-mobile": {
+        "children": ["rich-text#footer-2-col4-title-2"]
+    },
+    "disclosure-content#footer-4-mobile": {
+        "children": ["flex-layout.row#footer-pagamentos"]
     }
 }

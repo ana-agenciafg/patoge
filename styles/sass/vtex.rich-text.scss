@@ -83,7 +83,10 @@
   font-weight: normal;
 }
 .paragraph--footer-copyright{
-  font-size: 1.1rem;
+  font-size: 1.1rem;  
+  @include mobile{
+    margin-bottom: 20px;
+  }
 }
 .wrapper--header-contato-content{
   width: 100%;
@@ -99,6 +102,9 @@
   .link{
     text-decoration: unset;
     color: initial;
+    &:hover{
+      font-family: "FuturaBT-Medium"; 
+    }
   }
   &::after{
     content: "";
@@ -133,5 +139,70 @@
 .paragraph--header-contato-content-duvidas{ 
   &::before{
     content: url(assets/img/duvidas.svg);
+  }
+}
+
+.paragraph--footer-newsletter-text{
+  color: white; 
+  @include desktop{
+    font-size: 1.6rem;
+    .strong{
+      font-size: 2.0rem;
+    }
+  }
+  @include mobile{ 
+    font-size: 1.4rem;
+    .strong{
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.container--footer-newsletter-text{
+  @include mobile{
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.wrapper--footer-whatsapp{
+  padding-left: 30px;
+  position: relative;
+  margin-top: 5px;
+  &::before{ 
+    content: url(assets/img/whatsapp.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .paragraph{
+    margin: 0;
+  }
+  .link{
+    color: initial;
+    display: block;
+  }
+}
+
+.paragraph--shelf-link{
+  margin-top: 5px;
+}
+
+.container--title-minicart{
+  margin: 0 auto;
+  .paragraph{
+    font-family: "FuturaBT-Heavy";  
+  } 
+}
+
+.paragraph--home-slide-de-banners-titulo, .heading--home-slide-de-banners-titulo{
+  font-family: 'FuturaBT-Light'; 
+  margin: 0;
+  text-transform: uppercase;
+  @include desktop{
+    font-size: 2.4rem;
+  }
+  @include mobile{
+    font-size: 2.0rem;
   }
 }

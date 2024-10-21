@@ -70,6 +70,18 @@
   }
 }
 
+.sliderLayoutContainer--deals-mobile {
+  background-color: #F5F5F5;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+.sliderLayoutContainer--deals-mobile :global(.vtex-flex-layout-0-x-flexRowContent) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
 @media (min-width: 770px) {
   .sliderLeftArrow--carousel-fullbanner-home {
     left: 3rem;

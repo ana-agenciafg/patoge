@@ -14,13 +14,55 @@ html{
     :global(.vtex-sticky-layout-0-x-container):not(:hover) {
         background-image: linear-gradient(to bottom,rgba(29,27,26,0.8),rgba(29,27,26,0.4),transparent);
         background-color: transparent;
-        :global(.vtex-flex-layout-0-x-flexRow){
+        :global(.vtex-flex-layout-0-x-flexCol--invert-color),:global(.vtex-store-components-3-x-logoLink){
             filter: invert(1);
-        }
+        } 
     }  
     @include desktop{ 
+        :global(.vtex-sticky-layout-0-x-container):not(:hover) { 
+            :global(.patoge-patoge-0-x-menuLink--main-menu-header){
+                color: #11100f !important;
+                filter: invert(1);
+                font-family: "FuturaBT-Medium";
+            } 
+        }  
         :global(.vtex-sticky-layout-0-x-container) {  
             top: -31px !important; 
         }  
     }
 }  
+
+.portalWrapper--header{ 
+  .contentContainer {
+    box-shadow: $box-shadow;
+    margin-top: 9px;
+    width: 300px;
+  }
+  .arrowUp{
+    display: none;
+  }
+  .accessCodeOptionBtn{
+    :global(.vtex-button) { 
+      background-color: #11100f;
+      :global(.vtex-button__label) {
+        color: white; 
+      }
+    }
+  }
+  .sendButton{
+    :global(.t-small){
+        color: white;
+    }
+  }
+  :global(.t-small){
+    font-family: "FuturaBT-Book";
+  }
+  :global(.vtex-button) { 
+    height: 40px;
+  }
+  :global(.vtex-button__label), .oauthLabel {
+    font-size: 1.2rem;
+    font-family: "FuturaBT-Book";
+    color: #11100f;
+  }
+}

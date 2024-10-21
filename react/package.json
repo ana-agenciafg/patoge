@@ -34,7 +34,7 @@
     "@vtex/tsconfig": "^0.4.4",
     "apollo-client": "^2.6.8",
     "graphql": "^14.6.0",
-    "patoge.patoge": "https://store--patoge.myvtex.com/_v/private/typings/linked/v1/patoge.patoge@0.0.7+build1728500976/public/@types/patoge.patoge",
+    "patoge.patoge": "https://store--patoge.myvtex.com/_v/private/typings/linked/v1/patoge.patoge@0.0.9+build1729535667/public/@types/patoge.patoge",
     "typescript": "3.9.7",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.30.2/public/@types/vtex.add-to-cart-button",
     "vtex.breadcrumb": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.5/public/@types/vtex.breadcrumb",
@@ -86,6 +86,7 @@
     "vtex.store-video": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-video@1.4.3/public/@types/vtex.store-video",
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.13/public/@types/vtex.styleguide",
     "vtex.tab-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.tab-layout@0.4.6/public/@types/vtex.tab-layout",
-    "vtex.telemarketing": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.telemarketing@2.12.1/public/@types/vtex.telemarketing"
+    "vtex.telemarketing": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.telemarketing@2.12.1/public/@types/vtex.telemarketing",
+    "vtex.wish-list": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wish-list@1.18.2/public/@types/vtex.wish-list"
   }
 }

@@ -1,6 +1,6 @@
 .flexRowContent--main-header-mobile {
   align-items: center;
-  padding: 10px 20px; 
+  padding: 10px 5px 10px 20px; 
 } 
 
 .flexRowContent--deals {
@@ -99,7 +99,7 @@
 }
 
 .flexCol--header-row3-right{
-  :global(.vtex-login-2-x-label){
+  :global(.vtex-login-2-x-label),:global(.vtex-login-2-x-profile ){
     font-size: 0; 
     padding: 0;
     display: inline-block;
@@ -113,6 +113,9 @@
     :global(.vtex-button__label){
       padding: 0 !important;
     }
+    :global(.vtex-button){
+      background-color: transparent !important;
+    }
   }
 }
 
@@ -120,8 +123,13 @@
   background-color: #1D1B1A;
   position: relative;
 }
-.flexRow--footer-3-desktop{
-  background-color: $cinza;
+.flexRow--footer-3{
+  @include desktop{
+    background-color: $cinza;
+  }
+  @include mobile{
+    padding-bottom: 25px;
+  }
 }
 
 .flexRowContent--trio-de-banners{
@@ -136,6 +144,9 @@
 }
 
 .flexRow--trio-de-banners{
+  :global(.vtex-image-and-text-0-x-image){
+    width: 100%;
+  }
   :global(.vtex-image-and-text-0-x-text){
     font-size: 3.2rem;
     color: white; 
@@ -203,12 +214,171 @@
   border-bottom: 1px solid $cinza;
 }
 
-.flexRowContent--payment-methods { 
+.flexRowContent--footer-2-desktop { 
   :global(.vtex-menu-2-x-styledLinkContainer--footer_menu) {
     margin: 3px 0;
   }
+}
+.flexRowContent--footer-2-desktop,.flexRowContent--footer-2-mobile { 
   :global(.vtex-rich-text-0-x-paragraph--footer-title)  {
-    margin: 0 0 5px 0;
-    font-family: 'FuturaBT-Heavy';
+    margin: 0 0 5px 0; 
   }
+}
+.flexRow--footer-2-mobile{
+  :global(.vtex-disclosure-layout-1-x-content ){
+    :global(.vtex-menu-2-x-menuItem--footer_menu)  {
+      margin: 4px 0;
+    }
+    :global(.vtex-menu-2-x-menuContainer){
+      margin-bottom: 10px;
+    }
+    :global(.vtex-rich-text-0-x-container--footer-whatsapp){
+      margin-left: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  :global(.vtex-disclosure-layout-1-x-trigger){
+    border: 0;
+    background: transparent;
+    border-bottom: 1px #D9D9D9 solid;
+    width: 100%;
+    padding: 13px 10px; 
+    :global(.vtex-rich-text-0-x-wrapper)  {
+      width: 100%;
+    }
+    :global(.vtex-rich-text-0-x-paragraph)  {
+      margin: 0; 
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      &::after{
+        content: url(assets/img/seta-disclosure.svg);
+        display: block;
+      }
+    }
+    &:global(.vtex-disclosure-layout-1-x-trigger--hidden) :global(.vtex-rich-text-0-x-paragraph){
+      &::after{
+        transform: scaleY(-1);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+.flexCol--footer-2-redes-sociais-mobile{
+  justify-content: center;
+  text-align: center;
+  :global(.vtex-rich-text-0-x-container){
+    justify-content: center;
+  }
+  :global(.vtex-rich-text-0-x-paragraph){
+    font-size: 1.6rem;
+  }
+}
+
+.flexColChild--footer-2-redes-sociais-mobile {
+  .flexRowContent {
+    justify-content: center;
+  }
+}
+.flexRowContent--shelfTitle{
+  @include desktop{
+    padding: 0 4%;
+  }
+  :global(.vtex-rich-text-0-x-heading){
+    font-family: 'FuturaBT-Light'; 
+    margin: 0;
+    @include desktop{
+      font-size: 2.4rem;
+    }
+    @include mobile{
+      font-size: 2.0rem;
+    }
+  }
+  :global(.vtex-rich-text-0-x-container){
+    align-items: center;
+  }
+  :global(.vtex-rich-text-0-x-container--shelf-link ){
+    @include desktop{
+      justify-content: end;
+    }
+  }
+  :global(.vtex-rich-text-0-x-link--shelf-link){
+    color: initial;
+    text-transform: uppercase; 
+    @include desktop{
+      font-size: 1.6rem;
+    }
+    @include mobile{
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.flexRow--contato-fixo{
+  position: fixed;
+  right: 0;
+  bottom: 10%;
+  :global(.vtex-disclosure-layout-1-x-trigger){
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, .15);
+    background-color: #1D1B1A;
+    border: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    &:global(.vtex-disclosure-layout-1-x-trigger--visible)::before{
+      content: url(assets/img/white-close.svg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background: #1D1B1A;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  :global(.vtex-disclosure-layout-1-x-content){
+    position: absolute;
+    right: 20px;
+    bottom: 55px;
+    background: white;
+    width: 215px;
+    height: auto;
+    padding: 0 10px;
+  }
+  :global(.vtex-rich-text-0-x-paragraph--header-contato-content)::after {
+    display: none;
+  }
+}
+.flexRow--minicart-footer{
+  background-color: $cinza;
+  padding: 0 10px;
+}
+.flexRowContent--minicart-header{
+  display: grid;
+  grid-template-columns: 70px 1fr 70px; 
+  align-items: center;
+  margin: 0;
+  padding: 0 10px;
+}
+.flexRow--minicart-header{
+  box-shadow: $box-shadow;
+  margin-bottom: 10px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+} 
+.flexColChild--empty-state2{
+  width: 90%; 
+}
+
+.flexRow--bg-cinza{
+  background-color: $cinza;
 }

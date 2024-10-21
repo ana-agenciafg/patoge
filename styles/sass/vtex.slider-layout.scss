@@ -66,6 +66,17 @@
   }
 }
 
+.sliderLayoutContainer--deals-mobile{
+  background-color: $cinza;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  :global(.vtex-flex-layout-0-x-flexRowContent){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+}
 
 @include desktop{
   .sliderLeftArrow--carousel-fullbanner-home{

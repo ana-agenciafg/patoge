@@ -1,0 +1,87 @@
+{
+    "flex-layout.row#home-slide-de-banners": {
+        "title": "Categorias em Banners",
+        "props": { 
+            "blockClass": ["bg-cinza", "home-slide-de-banners"],
+            "paddingBottom": 9,
+            "paddingTop": 9,
+            "horizontalAlign": "between"
+        },
+        "children": [ 
+            "flex-layout.col#home-slide-de-banners-titulo",
+            "flex-layout.col#home-slide-de-banners"
+        ]
+    },
+    "flex-layout.col#home-slide-de-banners-titulo": {
+        "title": "Título",
+        "props": { 
+            "blockClass": "home-categoria-em-banners-titulo",
+            "width": "30%"
+        },
+        "children": [ "rich-text#home-slide-de-banners-titulo" ]
+    },
+    "rich-text#home-slide-de-banners-titulo": {
+      "props": {
+        "text": "Encontre sua \n calça perfeita.",
+        "blockClass": "home-slide-de-banners-titulo"
+      }
+    },
+    "flex-layout.col#home-slide-de-banners": {
+        "title": "Categorias em Banners",
+        "props": { 
+            "blockClass": "home-categoria-em-banners",
+            "width": "70%"
+        },
+        "children": [ 
+            "list-image-and-text#home-slide-de-banners-1"
+        ]
+    },
+    
+    "list-image-and-text#home-slide-de-banners-1": {
+        "title": "Banner 1"
+    },
+    "slider-layout#home-slide-de-banners": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "autoplay": {
+                "timeout": 3000
+            },
+            "infinite": true,
+            "showNavigationArrows": "always",
+            "showPaginationDots": "never"
+        },
+        "children": ["list-image-and-text#home-slide-de-banners-1"]
+    },
+    "image-and-text#home-slide-de-banners-1": {
+        "title": "Banner 1",
+        "props": {
+            "image": "assets/img/home-slide-de-banners.png",
+            "text": "BOYFRIEND" 
+        }
+    },
+    "image-and-text#home-slide-de-banners-2": {
+        "title": "Banner 2",
+        "props": {
+            "image": "assets/img/home-slide-de-banners.png",
+            "text": "FLARE" 
+        }
+    },
+    "image-and-text#home-slide-de-banners-3": {
+        "title": "Banner 3",
+        "props": {
+            "image": "assets/img/home-slide-de-banners.png",
+            "text": "BOOT CUT" 
+        }
+    },
+    "image-and-text#home-slide-de-banners-4": {
+        "title": "Banner 4",
+        "props": {
+            "image": "assets/img/home-slide-de-banners.png",
+            "text": "BOYFRIEND" 
+        }
+    } 
+}

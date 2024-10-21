@@ -93,6 +93,23 @@
   width: 100%;
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sizeMobile {
+  max-width: unset;
+  max-height: unset;
+  min-width: unset;
+  height: 25px;
+  overflow: hidden;
+  display: block;
+}
+.sizeMobile :global(.vtex-store-components-3-x-logoImage) {
+  margin-top: -1px;
+}
+
 .productBrandName--summaryListDesktop {
   text-decoration: none;
   font-weight: 500;
